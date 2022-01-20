@@ -1,0 +1,20 @@
+<section>
+    <article>
+        <h2>Interpolation</h2>
+        <p>My Name is {{ Myname }}</p>
+        <p>I am {{ Myage }} years old</p>
+    </article>
+    <article>
+        <h2>Property Binding</h2>
+        <p [ngStyle]="{color:colorpro}"> I live in Valsad</p>
+        <p [innerHTML]="place"></p>
+    </article>
+    <article>
+        <h2>Event Binding</h2>
+        <button (click)="showalert()"> Hello there</button>
+    </article>
+    <article>
+        <h2>2 Way Binding</h2>
+        <input type="text" [(ngModel)]='truck' placeholder="Enter Kuch Bhi"> {{truck}}
+    </article>
+</section>

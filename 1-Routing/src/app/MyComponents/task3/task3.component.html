@@ -1,0 +1,60 @@
+<section>
+    <form>
+        <fieldset>
+            <legend> Personal Details</legend>
+            <p>
+                <label for="fname"> First Name :-</label>
+                <input type="text" name="fname" id="fname" placeholder="Enter here" required autofocus>
+            </p>
+            <p>
+                <label for="mname"> Middle Name :-</label>
+                <input type="text" name="mname" id="mname" placeholder="Enter here" required>
+            </p>
+            <p>
+                <label for="lname"> Last Name :-</label>
+                <input type="text" name="lname" id="lname" placeholder="Enter here" required>
+            </p>
+            <p>
+                <label for="add"> Address :- </label>
+                <textarea name="add" id="add" cols="30" rows="7" style="resize: none;"></textarea>
+            </p>
+            <p>
+                <label for="gender"> Gender :- </label>
+                <input type="radio" name="gender" id="male" >
+                <label for="male"> Male </label>
+                <input type="radio" name="gender" id="female" >
+                <label for="female"> Female </label>
+            </p>
+            <p>
+                <label for="dob"> Date of Birth :- </label>
+                <input type="date" name="dob" id="dob">
+            </p>
+            <p>
+                <label for="country"> Country :- </label>
+                <select name="country" id="">
+                    <option value="india"> India</option>
+                    <option value="china"> China</option>
+                    <option value="Sri"> Sri Lanka</option>
+                    <option value="pakistan"> Pakistan</option>
+                    <option value="russia"> Russia</option>
+                </select>
+            </p>
+
+            <fieldset>
+                <legend> Which Games you have played?</legend>
+                <p>
+                    <input type="checkbox" name="game" value="cod" id="cod">
+                    <label for="cod"> Call of Duty</label>
+                </p>
+                <p>
+                    <input type="checkbox" name="game" value="battle" id="battle">
+                    <label for="battle"> Battlefield</label>
+                </p>
+            </fieldset>
+            <p>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Click for Reset">
+            </p>
+        </fieldset>
+    </form>
+</section>

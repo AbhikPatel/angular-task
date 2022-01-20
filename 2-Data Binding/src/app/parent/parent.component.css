@@ -1,0 +1,19 @@
+section{
+    padding: 20px 70px;
+    background-color: #212121;
+    height: 900px;
+    color: white;
+}
+
+article{
+    height: auto;
+    background-color: #353434;
+    padding: 20px 50px;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+
+h2{
+    margin-bottom: 20px;
+    color: aqua;
+}
