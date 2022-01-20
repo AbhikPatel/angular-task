@@ -11,7 +11,14 @@ export class ParentComponent implements OnInit {
 
   parentnasto = 'Pavwa';
 
+  blank = '';
+
   ngOnInit(): void {
+  }
+ 
+  parentFunction(childata:any)
+  {
+    this.blank = childata.name;
   }
 
 }
