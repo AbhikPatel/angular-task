@@ -11,40 +11,23 @@ export class DataComponent implements OnInit {
 
   title = 'task-6';
 
+  // Interpolation Section 
   Myname = 'Abhishek Kishorbhai Patel';
   Myage = 22;
 
+  // Property Binding  
   colorpro = 'green';
-
   place = 'Gujarat - 396001';
 
-  myclass = 'text';
-
+  // Event Binding 
   showalert(){
     alert("Aur janab, Kya chal raha hai?")
   }
 
+  // Two Way Binding 
   truck = '';
-
   parentnasto = 'Sandwich';
 
-  male = 'boyzz';
-
-  female = 'gl';
-
-  ans = '';
-
-  employee = [
-    { id: 12, name : 'Abhishek'},
-    { id: 45, name : 'Chirag'},
-    { id: 17, name : 'Abloh'},
-    { id: 78, name : 'Shreya'},
-    { id: 24, name : 'Nirali'},
-    { id: 69, name : 'Ankit'},
-    { id: 52, name : 'Bachchan'},
-    { id: 75, name : 'Bhodo'},
-    { id: 36, name : 'Bablu'}
-  ]
   ngOnInit(): void {
   }
 

@@ -6,7 +6,7 @@ import { ParentComponent } from './parent/parent.component';
 const routes: Routes = [
   {path: 'data', component: DataComponent},
   {path: 'parent', component: ParentComponent},
-  {path: '**', component: DataComponent},
+  {path: '**', component: DataComponent}
   
 ];
 
