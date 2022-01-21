@@ -1,0 +1,35 @@
+<section>
+    <!-- If Statement  -->
+    <article>
+        <h2> ngIf </h2>
+        <label for="question"> Choose true or false for IF Statement:- </label> 
+        <p>
+            <label for="true"> True </label>
+            <input type="radio" id="true" value="true" name="question" (click)="showtrue()">
+            <label for="false"> False </label>
+            <input type="radio" id="false" value="false" name="question"  (click)="showfalse()">
+        </p>
+            <p *ngIf="truedata; else elsedata"> Show this if true</p>
+        <ng-template #elsedata> This is else data</ng-template>
+    </article>
+
+    <article>
+        <h2>ngFor</h2>
+        <table>
+            <tr>
+                <th> Sr. no.</th>
+                <th> Name</th>
+                <th> Age</th>
+                <th> City</th>
+                <th> Country</th>
+            </tr>
+            <tr *ngFor = 'let user of users'>
+                <td>{{user.id}}</td>
+                <td>{{user.name}}</td>
+                <td>{{user.age}}</td>
+                <td>{{user.city}</td>
+                <td>{{user.country}}</td>
+            </tr>
+        </table>
+    </article>
+</section>

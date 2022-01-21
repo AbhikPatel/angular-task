@@ -1,7 +1,9 @@
 section{
     padding: 20px 70px;
     background-color: #212121;
-    height: 900px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     color: white;
 }
 

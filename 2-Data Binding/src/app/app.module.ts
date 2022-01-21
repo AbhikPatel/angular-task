@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { DataComponent } from './data/data.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
+import { DemoDirective } from './demo.directive';
+import { DirectivesComponent } from './directives/directives.component';
 
 
 @NgModule({
@@ -15,7 +17,9 @@ import { ChildComponent } from './parent/child/child.component';
     HeaderComponent,
     DataComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    DemoDirective,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
