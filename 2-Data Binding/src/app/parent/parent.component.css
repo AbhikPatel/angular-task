@@ -5,6 +5,8 @@ section{
     flex-direction: column;
     flex-grow: 1;
     color: white;
+    height: 90vh;
+    overflow: auto;
 }
 
 article{

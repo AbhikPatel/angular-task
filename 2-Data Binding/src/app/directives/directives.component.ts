@@ -8,7 +8,13 @@ import { flatMap } from 'rxjs';
 })
 export class DirectivesComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    // Data & time 
+    setInterval(() => {
+      this.date = new Date();
+    }, 1);
+  }
+  date:Date= new Date();
 
 
   // ngIf Data 
@@ -25,13 +31,5 @@ export class DirectivesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // ngfor Datas
-  users = [
-    {id: 1, name:'Abhishek' , age: 22, city:'Valsad', country:'India'},
-    {id: 2, name:'Ankit' , age: 22, city:'Valsad', country:'India'},
-    {id: 3, name:'Chirag' , age: 22, city:'Valsad', country:'India'},
-    {id: 4, name:'Shreya' , age: 22, city:'Valsad', country:'India'},
-    {id: 5, name:'Bhodo' , age: 22, city:'Valsad', country:'India'},
-    {id: 6, name:'Nirali' , age: 22, city:'Valsad', country:'India'},
-  ]
+  
 }

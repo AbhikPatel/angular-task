@@ -4,7 +4,8 @@ section{
     color: white;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: auto;
+    height: 90vh;
     /* flex-grow: 1; */
 }
 
@@ -15,14 +16,10 @@ article{
     border-radius: 20px;
     margin: 20px 0;
     box-shadow: 10px 10px 20px black;
-    position: relative;
-    bottom: 10px;
+    /* position: relative; */
+    /* bottom: 10px; */
 }
 
-article:hover{
-    box-shadow: 0 0 0 0;
-    bottom: 0;
-}
 
 h2{
     margin-bottom: 20px;

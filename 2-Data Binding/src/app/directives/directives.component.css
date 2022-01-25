@@ -4,8 +4,9 @@ section{
     color: white;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    /* flex-grow: 1; */
+    overflow: auto;
+    height: 90vh;
+    flex-grow: 1;
 }
 
 article{
@@ -15,9 +16,11 @@ article{
     border-radius: 20px;
     margin: 20px 0;
     box-shadow: 10px 10px 20px black;
+    width: auto;
 }
 
 h2{
     margin-bottom: 20px;
     color: aqua;
 }
+

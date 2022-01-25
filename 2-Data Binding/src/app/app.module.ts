@@ -9,6 +9,10 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './parent/child/child.component';
 import { DemoDirective } from './demo.directive';
 import { DirectivesComponent } from './directives/directives.component';
+import { TableCurrencyComponent } from './directives/table-currency/table-currency.component';
+import { TableUserComponent } from './directives/table-user/table-user.component';
+import { BgcolorDirective } from './directives/bgcolor.directive';
+import { TitleuppercasePipe } from './directives/titleuppercase.pipe';
 
 
 @NgModule({
@@ -19,7 +23,11 @@ import { DirectivesComponent } from './directives/directives.component';
     ParentComponent,
     ChildComponent,
     DemoDirective,
-    DirectivesComponent
+    DirectivesComponent,
+    TableCurrencyComponent,
+    TableUserComponent,
+    BgcolorDirective,
+    TitleuppercasePipe
   ],
   imports: [
     BrowserModule,

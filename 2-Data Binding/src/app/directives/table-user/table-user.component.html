@@ -1,0 +1,32 @@
+<h2>ngFor with custom pipes</h2>
+<p> Pipes are added in City Column (Uppercase)</p>
+<p> Click Any of the Row below</p>
+<table>
+    <tr style=" color: aqua;">
+        <th> Sr. no.</th>
+        <th> Name</th>
+        <th> Age</th>
+        <th> City</th>
+        <th> Country</th>
+    </tr>
+    <tr *ngFor='let user of users; let i = index; trackBy:trackBydetailId' (click)="onSelect(user)"
+        TrackBy="trackBydetailId" style="cursor: pointer;">
+        <td>{{user.id}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.age}}</td>
+        <td>{{user.city}}</td>
+        <td>{{user.country}}</td>
+    </tr>
+</table>
+
+<div *ngIf="currentdata">
+    <fieldset>
+        <legend style="color: aqua; font-size: 1.5rem;">Details</legend>
+
+        <p>id :- {{ currentdata.id}}</p>
+        <p>Name :- {{ currentdata.name}}</p>
+        <p>Age :- {{ currentdata.age}}</p>
+        <p>City :- {{ currentdata.city | titleuppercase }}</p>
+        <p>Country :- {{ currentdata.country }}</p>
+    </fieldset>
+</div>
