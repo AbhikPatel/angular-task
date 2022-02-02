@@ -5,12 +5,20 @@
         <label for="question"> Choose true or false for IF Statement:- </label>
         <p>
             <label for="true"> True </label>
-            <input type="radio" id="true" value="true" name="question" (click)="showtrue()">
+            <input type="radio" id="true" [value]="showMsg" name="question" (change)="showtrue()">
             <label for="false"> False </label>
-            <input type="radio" id="false" value="false" name="question" (click)="showfalse()">
+            <input type="radio" id="false" [value]="!showMsg" name="question" (change)="showtrue()">
         </p>
-        <p *ngIf="truedata; else elsedata"> Show this if true</p>
-        <ng-template #elsedata> This is else data</ng-template>
+       <!--  <p>
+            <label for="true2"> True </label>
+            <input type="radio" id="true2" [value]="true" name="question" [(ngModel)]='displaytrue'>
+            <label for="false2"> False </label>
+            <input type="radio" id="false2" [value]="false" name="question" [(ngModel)]='displayfalse'>
+        </p> -->
+        <!-- <p></p>
+        <p *ngIf="displaytrue; else elsedata"> Show this if true</p>
+        <ng-template #elsedata> This is else data</ng-template> -->
+            {{showMsg}}
     </article>
     <article>
         <h2 appBgcolor>Custom Directive</h2>
@@ -19,6 +27,7 @@
         <h2>Data & Time (Live)</h2>
         <p>Date :- {{date | date:'dd/MM/YYYY'}}</p>
         <p>Time :- {{date | date:'hh:mm:ss'}}</p>
+        <p> {{'jay' | titleuppercase}}</p>
     </article>
     <article>
         <app-table-currency></app-table-currency>

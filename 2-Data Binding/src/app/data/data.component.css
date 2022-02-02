@@ -1,12 +1,14 @@
+:host{
+    width: 100%;
+    background-color: #212121;
+}
+
 section{
     padding: 20px 70px;
-    background-color: #212121;
     color: white;
     display: flex;
     flex-direction: column;
-    overflow: auto;
-    height: 90vh;
-    /* flex-grow: 1; */
+    height: 100%;
 }
 
 article{
@@ -16,14 +18,12 @@ article{
     border-radius: 20px;
     margin: 20px 0;
     box-shadow: 10px 10px 20px black;
-    /* position: relative; */
-    /* bottom: 10px; */
 }
 
 
 h2{
     margin-bottom: 20px;
-    color: aqua;
+    color: grey;
 }
 
 .text{

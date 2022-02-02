@@ -8,28 +8,28 @@ import { flatMap } from 'rxjs';
 })
 export class DirectivesComponent implements OnInit {
 
-  constructor() { 
+  showMsg: boolean = false;
+
+  constructor() {
     // Data & time 
     setInterval(() => {
       this.date = new Date();
     }, 1);
   }
-  date:Date= new Date();
+  date: Date = new Date();
 
 
   // ngIf Data 
-  truedata:boolean = true;
-  showtrue()
-  {
-    this.truedata = true
-  }
-  showfalse()
-  {
-    this.truedata = false
+  truedata: boolean = true;
+  showtrue() {
+    this.showMsg = !this.showMsg;
   }
 
   ngOnInit(): void {
   }
 
-  
+
+  displaytrue: boolean = true;
+  displayfalse: boolean = false;
+
 }
