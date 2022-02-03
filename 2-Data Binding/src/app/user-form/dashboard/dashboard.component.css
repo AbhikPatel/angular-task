@@ -1,0 +1,43 @@
+:host{
+    display: flex;
+    flex-grow: 1;
+}
+
+.test{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.router{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+header{
+    height: 80px;
+    background-color: #313131;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 70px;
+    display: flex;
+    color: white;
+}
+
+button{
+    border: none;
+    padding: 5px 30px;
+    display: flex;
+    border-radius: 5px;
+    align-items: center;
+    background-color: aqua;
+    cursor: pointer;
+}
+
+button a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.25rem;
+    font-weight: 600;
+}

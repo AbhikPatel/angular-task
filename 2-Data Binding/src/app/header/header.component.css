@@ -1,8 +1,15 @@
+:host{
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 aside{
     display: flex;
     flex-direction: column;
-    flex: 0 0 200px;
-    background-color: #414141;
+    min-width: 200px;
+    background-color: #212121;
     padding: 30px;
     height: 100%;
     text-align: right;

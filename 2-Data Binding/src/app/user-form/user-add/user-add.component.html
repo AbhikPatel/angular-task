@@ -1,0 +1,38 @@
+<section>
+    <form [formGroup]="groupvalue">
+        <p>
+            <label for="fname"> First Name :- </label>
+            <input formControlName='firstname' type="text" name="fname" id="fname">
+            <small class="requi" *ngIf="!groupvalue.get('firstname')?.valid && groupvalue.get('firstname')?.touched"> This Feild is required.</small>
+        </p>
+        <p>
+            <label for="lname"> Last Name :- </label>
+            <input formControlName='lastname' type="text" name="lname" id="lname">
+            <small class="requi" *ngIf="!groupvalue.get('lastname')?.valid && groupvalue.get('lastname')?.touched"> This Feild is required.</small>
+        </p>
+        <p>
+            <label for="mail"> E-Mail :- </label>
+            <input formControlName='mail' type="email" name="mail" id="mail">
+            <small class="requi" *ngIf="!groupvalue.get('mail')?.valid && groupvalue.get('mail')?.touched"> This Feild is required.</small>
+        </p>
+        <p>
+            <label for="num"> Phone Number :- </label>
+            <input type="number" name="num" id="num">
+        </p>
+        <p>
+            <label for="gender"> Gender :- </label>
+            <input type="radio" name="gender" id="male">
+            <label for="male"> Male</label>
+            <input type="radio" name="gender" id="female">
+            <label for="female"> Female</label>
+        </p>
+        <p>
+            <label for="birth"> Date of birth :- </label>
+            <input type="date" name="birth" id="birth">
+        </p>
+        <p style="display: flex; justify-content: center;">
+            <input type="submit" value="SUBMIT" class="sub">
+            <input type="reset" value="RESET" class="sub">
+        </p>
+    </form>
+</section>
