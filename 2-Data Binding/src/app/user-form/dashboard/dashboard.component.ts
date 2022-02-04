@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class DashboardComponent implements OnInit {
 
   buttonName: string = "Add User";
-  pathName: string = "userform";
+  // pathName: string = "userform";
   isAdminView: boolean = true;
   
   constructor(private router: Router) { }

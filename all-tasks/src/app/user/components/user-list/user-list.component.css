@@ -1,0 +1,19 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+section{
+    padding: 100px;
+}
+
+section table{
+    margin: 0 auto;
+}
+
+table,th,td{
+    padding: 5px 10px;
+    border: 2px solid black;
+    border-collapse: collapse;
+}
