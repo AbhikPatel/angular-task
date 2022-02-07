@@ -1,46 +1,40 @@
 <section>
-    <form [formGroup]="useradd" (ngSubmit)="final()">
-
-        <div class="space">
-            <label for="fname"> First Name : </label>
-            <p>
-                <input type="text" name="fname" id="fname" formControlName="firstname">
-                <span *ngIf="useradd.get('firstname')?.touched && useradd.get('firstname')?.hasError('required')"> Enter Firstname </span>
-            </p>
-        </div>
-
-        <div class="space">
-            <label for="lname"> Last Name : </label>
-            <p>
-                <input type="text" name="lname" id="lname" formControlName="lastname">
-                <span *ngIf="useradd.get('lastname')?.touched && useradd.get('lastname')?.hasError('required')"> Enter Lastname </span>
-            </p>
-        </div>
-
-        <div class="space">
-            <label for="num"> Phone Number : </label>
-            <p>
-                <input type="number" name="num" id="num" formControlName="phone">
-                <span *ngIf="useradd.get('phone')?.touched && useradd.get('phone')?.hasError('required')"> Enter Phone Number </span>
-            </p>
-        </div>
-
-        <div class="space">
-            <label for="mail"> Email : </label>
-            <p>
-                <input type="email" name="mail" id="mail" formControlName="elemail">
-                <span *ngIf="useradd.get('elemail')?.touched && useradd.get('elemail')?.hasError('required')"> Enter your Email Address</span>
-                <span *ngIf="useradd.get('elemail')?.touched && useradd.get('elemail')?.hasError('email')"> Enter valid Email Address</span>
-            </p>
-        </div>
-
-
-        <input type="submit" value="Submit" [disabled]="!useradd.valid">
-        <input type="reset" value="Reset">
-
-    </form>
-</section>
-
-<section>
-    <p> {{ namebol }} </p>
+   <form [formGroup]="useradd" (ngSubmit)="final()">
+      <div class="space">
+         <label for="fname"> First Name :- </label>
+         <p>
+            <input type="text" name="fname" id="fname" formControlName='firstname'>
+            <span *ngIf="this.useradd.get('firstname')?.hasError('required') && this.useradd.get('firstname')?.dirty"> This is required. Bharni </span>
+            <span *ngIf="this.useradd.get('firstname')?.hasError('minlength')"> Enter Minimum 5 Characters  </span>
+         </p>
+      </div>
+      <div class="space">
+         <label for="lname"> Last Name :- </label>
+         <p>
+            <input type="text" name="lname" id="lname" formControlName='lastname'>
+         </p>
+      </div>
+      <div class="space">
+         <label for="Number"> Phone Number :- </label>
+         <p>
+            <input type="text" name="num" id="num" formControlName='phone'>
+         </p>
+      </div>
+      <div class="space">
+         <label for="mail"> Email :- </label>
+         <p>
+            <input type="email" name="mail" id="mail" formControlName='elemail'>
+         </p>
+      </div>
+      <div class="space">
+         <label for="gender" formControlName='gender' > Gender :- </label>
+         <p class="radio">
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male"> Male </label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female"> Female </label>
+         </p>
+      </div>
+      <input type="submit" value="Submit" [disabled]="!useradd.valid" >
+   </form>
 </section>

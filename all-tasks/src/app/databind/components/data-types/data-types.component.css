@@ -3,7 +3,7 @@
     flex-direction: column;
     flex-grow: 1;
     overflow: auto;
-    background-color: #eff8ff;
+    background-color: #fee440;
 }
 
 section{
@@ -12,7 +12,7 @@ section{
     border-radius: 5px; 
     color: black;
     border-bottom: 5px solid #0064d2;
-    background-color: white;
+    background-color: #f15bb5;
 }
 
 h3{

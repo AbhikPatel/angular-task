@@ -13,7 +13,7 @@ nav{
 }
 
 h2{
-    color: #2b6777;
+    color: #0064d2;
 }
 
 ul{
@@ -26,14 +26,14 @@ ul li{
 }
 
 ul li a{
-    color: #52ab98;
+    color: #0064d2;
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
 }
 
 ul li a.active{
-    background-color: #52ab98;
+    background-color: #0064d2;
     color: white;
     font-weight: 600;
 }

@@ -17,18 +17,14 @@ h1{
     padding: 0 30px 50px;
 }
 
-ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-}
 
-ul li{
+
+.menu li{
     margin: 20px 0;
     display: flex;
 }
 
-ul li a{
+.menu li a{
     text-decoration: none;
     padding: 15px 20px;
     color: white;
@@ -37,7 +33,7 @@ ul li a{
     border-radius: 2px;
 }
 
-ul li a.active{
+.menu li a.active{
     color: white;
-    background-color: #1a4971;
+    background-color: #002e66;
 }

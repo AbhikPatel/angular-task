@@ -3,7 +3,7 @@
     flex-direction: column;
     flex-grow: 1;
     overflow: auto;
-    background-color: #212121;
+    background-color: #eff8ff;
 }
 
 section{
@@ -13,6 +13,7 @@ section{
 
 h1 {
     margin-left: 300px;
+    color: #0064d2;
 }
 
 table,
@@ -20,10 +21,12 @@ tr,
 td,
 th {
     margin: auto;
-    border: 1px solid white;
+    border: 1px solid #0064d2;
     border-collapse: collapse;
     padding: 20px;
     text-align: center;
+    color: #0064d2;
+    background-color: white;
 }
 
 .mark {

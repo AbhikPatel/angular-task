@@ -10,7 +10,8 @@ import { DataPipesComponent } from './components/data-pipes/data-pipes.component
 import { FormsModule } from '@angular/forms';
 import { CustomPipesPipe } from './pipes/custom-pipes.pipe';
 import { DataChildComponent } from './components/data-types/data-child/data-child.component';
-import { HttpClient } from '@angular/common/http';
+import { TabledataService } from './services/tabledata.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -28,8 +29,11 @@ import { HttpClient } from '@angular/common/http';
     CommonModule,
     DatabindRoutingModule,
     FormsModule,
-    HttpClient,
+    HttpClientModule
     
+  ],
+  providers: [
+    TabledataService
   ]
 })
 export class DatabindModule { }

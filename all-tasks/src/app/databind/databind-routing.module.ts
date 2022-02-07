@@ -14,8 +14,9 @@ const routes: Routes = [
       {path:'direct', component: DataDirectivesComponent},
       {path:'current', component: DataCurrencyComponent},
       {path:'', redirectTo:'type', pathMatch:''},
-    ]
+    ],
     
+
   },
   {path:'', redirectTo:'datacompo', pathMatch:'full'}
 ];

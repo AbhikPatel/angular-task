@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder,FormGroup, FormControl, Validators, RequiredValidator } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, Validator, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-user-form',
@@ -8,31 +9,30 @@ import { FormBuilder,FormGroup, FormControl, Validators, RequiredValidator } fro
 })
 export class UserFormComponent implements OnInit {
 
-  useradd: FormGroup;
-  namebol:string = '';
-  constructor( private bob: FormBuilder) {
+  useradd:FormGroup;
+  constructor(private bob : FormBuilder) {
 
-    this.useradd = bob.group(
-      // {
-      //   firstname : new FormControl(),
-      //   lastname : new FormControl(),
-      //   phone : new FormControl(),
-      //   elemail : new FormControl(),
-      // }
-      {
-        firstname : ['', Validators.required],
-        lastname : ['', Validators.required],
-        phone : ['', [Validators.required]],
-        elemail : ['', [Validators.required, Validators.email]],
-      }
-    )
+    this.useradd = this.control();
   }
 
   ngOnInit(): void {
   }
 
+  control():FormGroup
+  {
+    return this.bob.group(
+      {
+        firstname: [ '', [Validators.required , Validators.minLength(5)]],
+        lastname: [ '', Validators.required],
+        phone: [ '', Validators.required],
+        elemail: [ '', Validators.required],
+        gender: [ '', Validators.required],
+      }
+    )
+  }
+
   final()
   {
-    this.namebol = this.useradd.value.firstname;
+    alert(this.useradd.value.gender)
   }
 }
