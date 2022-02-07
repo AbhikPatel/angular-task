@@ -5,10 +5,14 @@ const routes: Routes = [
   {path: 'seman',
     loadChildren: () => import('./semantic/semantic.module').then((a) => a.SemanticModule)
   },
-  { path: '', redirectTo:'seman', pathMatch:'full'},
   {path:'react',
-    loadChildren: () => import('./user/user.module').then((a) => a.UserModule)
-  }
+  loadChildren: () => import('./user/user.module').then((a) => a.UserModule)
+  },
+  {
+    path:'databind',
+    loadChildren:() => import('./databind/databind.module').then((c) => c.DatabindModule)
+  },
+  { path: '', redirectTo:'seman', pathMatch:'full'},
 ];
 
 @NgModule({

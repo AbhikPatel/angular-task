@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SemanticTask1Component } from './compoments/semantic-task1/semantic-task1.component';
-import { SemanticTask2Component } from './compoments/semantic-task2/semantic-task2.component';
-import { SemanticTask3Component } from './compoments/semantic-task3/semantic-task3.component';
-import { SemanticTask4Component } from './compoments/semantic-task4/semantic-task4.component';
+import { SemanticTask1Component } from './components/semantic-task1/semantic-task1.component';
+import { SemanticTask2Component } from './components/semantic-task2/semantic-task2.component';
+import { SemanticTask3Component } from './components/semantic-task3/semantic-task3.component';
+import { SemanticTask4Component } from './components/semantic-task4/semantic-task4.component';
 import { SemanticComponent } from './semantic.component';
 
 const routes: Routes = [

@@ -5,6 +5,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
 }
 
 body,html{

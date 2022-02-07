@@ -1,0 +1,30 @@
+<section>
+    <h4> {{ pipetext | titlecase}}</h4>
+    <h4> {{ tarik | date:'mediumTime'}} </h4>
+    <h4> {{ pipetext | customPipes }} </h4>
+</section>
+
+<section>
+    <h3> Custom Pipes</h3>
+    <table>
+        <thead>
+            <tr>
+                <th> Name</th>
+                <th> Price </th>
+                <th> Category</th>
+                <th> In-Stock </th>
+                <th> Action </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pro of pipetable">
+                <td> {{ pro.name }}</td>
+                <td> {{ pro.price }}</td>
+                <td> {{ pro.cat }}</td>
+                <td> {{ pro.stock }}</td>
+                <td><button (click)="edit()"> Edit </button></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+

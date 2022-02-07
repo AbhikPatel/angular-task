@@ -5,8 +5,7 @@
 }
 
 nav{
-    height: 80px;
-    background-color: #212121;
+    flex: 0 0 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,13 +13,13 @@ nav{
 }
 
 h2{
-    color: aqua;
+    color: #0064d2;
 }
 
 button{
     font-weight: 600;
-    background-color: aqua;
-    color: black;
+    background-color: #0064d2;
+    color: white;
     padding: 5px 10px;
     border: none;
     border-radius: 5px;

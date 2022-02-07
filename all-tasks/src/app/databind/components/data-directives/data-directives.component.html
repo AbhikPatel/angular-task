@@ -1,0 +1,30 @@
+<section>
+    <h3> ngFor </h3>
+    <table>
+        <thead>
+            <tr>
+                <th> Name </th>
+                <th> Price </th>
+                <th> Category </th>
+                <th> Instock </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pro of direct">
+                <td> {{pro.name}} </td>
+                <td> {{pro.price}} </td>
+                <td> {{pro.cat}} </td>
+                <td> {{pro.stock}} </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<table>
+    <tr *ngFor="let m of detailser">
+        <td> {{ m.id }} </td>
+        <td> {{ m.name }} </td>
+        <td> {{ m.username }} </td>
+        <td> {{ m.email }} </td>
+    </tr>
+</table>

@@ -1,0 +1,13 @@
+:host{
+    display: flex;
+    flex: 0 0 80px;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #cccccc;
+    flex-grow: 1;
+    color: black;
+}
