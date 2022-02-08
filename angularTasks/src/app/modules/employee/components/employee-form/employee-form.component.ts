@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CompanyService } from '../../services/company.service';
 
 @Component({
   selector: 'app-employee-form',
@@ -10,7 +11,7 @@ import { Router } from '@angular/router';
 export class EmployeeFormComponent implements OnInit {
 
   useradd:FormGroup
-  constructor(private route: Router, private bob:FormBuilder) { 
+  constructor(private route: Router, private bob:FormBuilder, private ser:CompanyService) { 
     this.useradd = this.garbage();
   }
 
@@ -26,14 +27,16 @@ export class EmployeeFormComponent implements OnInit {
         lastname:['',[Validators.required,Validators.minLength(5)]],
         phone:['',[Validators.required,Validators.minLength(10)]],
         elemail:['',[Validators.required,Validators.email]],
-        age:['',[Validators.required,Validators.maxLength(2)]],
-        gen:['',[Validators.required]],
+        umer:['',[Validators.required]]
       }
     )
   }
 
   nav()
   {
+    this.ser.postdata(this.useradd.value).subscribe(() => {
+      alert('Data is Saved go to list')
+    })
     this.route.navigate(['/employee/list']);
   }
 }

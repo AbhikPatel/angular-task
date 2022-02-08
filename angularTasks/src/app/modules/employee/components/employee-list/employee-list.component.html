@@ -8,8 +8,19 @@
             <th> Phone Number </th>
             <th> Email </th>
             <th> Age </th>
-            <th> Date of birth   </th>
             <th colspan="2"> Action </th>
         </tr>
     </thead>
+    <tbody>
+        <tr *ngFor="let m of listdata">
+            <td> {{m.firstname}} </td>
+            <td> {{m.lastname}} </td>
+            <td> {{m.phone}} </td>
+            <td> {{m.elemail}} </td>
+            <td> {{m.umer}} </td>
+            <td> <button (click)="deletedata(m.id)"> Delete </button> </td>
+            <td> <button> Edit </button> </td>
+
+        </tr>
+    </tbody>
 </table>

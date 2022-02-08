@@ -10,6 +10,7 @@
         <label for="lname"> Last Name :- </label>
         <input type="text" name="lname" id="lname" formControlName="lastname">
         <span *ngIf="useradd.get('lastname')?.touched && useradd.get('lastname')?.hasError('required')"> This field is required </span>
+        <span *ngIf="useradd.get('lastname')?.touched && useradd.get('lastname')?.hasError('minlength')"> Enter minimum 5 Character </span>
     </p>
     <p>
         <label for="phone"> Phone Number :- </label>
@@ -20,13 +21,14 @@
         <label for="mail"> Email :- </label>
         <input type="text" name="mail" id="mail" formControlName="elemail">
         <span *ngIf="useradd.get('elemail')?.touched && useradd.get('elemail')?.hasError('required')"> This field is required </span>
+        <span *ngIf="useradd.get('elemail')?.touched && useradd.get('elemail')?.hasError('email')"> Enter Valid Email </span>
     </p>
     <p>
         <label for="age"> Age :- </label>
         <input type="text" name="age" id="age" formControlName="umer">
         <span *ngIf="useradd.get('age')?.touched && useradd.get('age')?.hasError('required')"> This field is required </span>
     </p>
-    <p>
+    <!-- <p>
         <label for="gender"> Gender:- </label>
         <input type="radio" name="gender" id="male" formControlName="gen">
         <label for="male"> Male </label>
@@ -37,7 +39,7 @@
     <p>
         <label for="dob"> Date of Birth :- </label>
         <input type="date" name="dob" id="dob" formControlName="birth">
-    </p>
+    </p> -->
     <br><br><br>
-    <button (click)="nav()" [disabled]="!useradd.valid"> Submit </button>
+    <button (click)="nav()"> Submit </button>
 </form>
