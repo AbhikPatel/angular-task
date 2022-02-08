@@ -1,0 +1,43 @@
+<form [formGroup]="useradd">
+    <p>
+        <label for="fname"> First Name :- </label>
+        <input type="text" name="fname" id="fname" formControlName="firstname">
+        <span *ngIf="useradd.get('firstname')?.touched && useradd.get('firstname')?.hasError('required')"> This field is required </span>
+        <span *ngIf="useradd.get('firstname')?.touched && useradd.get('firstname')?.hasError('minlength')"> Enter minimum 5 Character </span>
+        <span *ngIf="useradd.get('firstname')?.touched && useradd.get('firstname')?.hasError('maxlength')"> Enter Maximum 10 Character </span>
+    </p>
+    <p>
+        <label for="lname"> Last Name :- </label>
+        <input type="text" name="lname" id="lname" formControlName="lastname">
+        <span *ngIf="useradd.get('lastname')?.touched && useradd.get('lastname')?.hasError('required')"> This field is required </span>
+    </p>
+    <p>
+        <label for="phone"> Phone Number :- </label>
+        <input type="number" name="phone" id="phone" formControlName="phone">
+        <span *ngIf="useradd.get('phone')?.touched && useradd.get('phone')?.hasError('required')"> This field is required </span>
+    </p>
+    <p>
+        <label for="mail"> Email :- </label>
+        <input type="text" name="mail" id="mail" formControlName="elemail">
+        <span *ngIf="useradd.get('elemail')?.touched && useradd.get('elemail')?.hasError('required')"> This field is required </span>
+    </p>
+    <p>
+        <label for="age"> Age :- </label>
+        <input type="text" name="age" id="age" formControlName="umer">
+        <span *ngIf="useradd.get('age')?.touched && useradd.get('age')?.hasError('required')"> This field is required </span>
+    </p>
+    <p>
+        <label for="gender"> Gender:- </label>
+        <input type="radio" name="gender" id="male" formControlName="gen">
+        <label for="male"> Male </label>
+        <input type="radio" name="gender" id="female" formControlName="gen">
+        <label for="female"> Female </label>
+        <span *ngIf="useradd.get('gen')?.touched && useradd.get('gen')?.hasError('required')"> This field is required </span>
+    </p>
+    <p>
+        <label for="dob"> Date of Birth :- </label>
+        <input type="date" name="dob" id="dob" formControlName="birth">
+    </p>
+    <br><br><br>
+    <button (click)="nav()" [disabled]="!useradd.valid"> Submit </button>
+</form>

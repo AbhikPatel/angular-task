@@ -6,6 +6,8 @@ import { ReactuserComponent } from './reactuser.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { TabledataService } from './services/tabledata.service';
 
 
 @NgModule({
@@ -17,7 +19,11 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     ReactuserRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
+  ],
+  providers:[
+    TabledataService
   ]
 })
 export class ReactuserModule { }

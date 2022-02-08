@@ -1,4 +1,4 @@
-<form class="d-flex f-direct" [formGroup]="useradd" (ngSubmit)="final()"> 
+<form class="d-flex f-direct" [formGroup]="useradd" (ngSubmit)="createuser()"> 
     <h2> User Registration Form</h2>
     <div class="space d-flex j-between">
         <label for="fname"> First Name :- </label>
@@ -14,6 +14,7 @@
             <input type="text" name="lname" id="lname" formControlName = 'lastname'>
             <span *ngIf="useradd.get('lastname')?.touched && useradd.get('lastname')?.hasError('required')"> This Feild is Required</span>
             <span *ngIf="useradd.get('lastname')?.touched && useradd.get('lastname')?.hasError('minlength')"> Enter Minimum 5 Character</span>
+            <span *ngIf="useradd.get('lastname')?.touched && useradd.get('lastname')?.hasError('maxlength')"> Enter Maximum 15 Character</span>
         </p>
     </div>
     <div class="space d-flex j-between">

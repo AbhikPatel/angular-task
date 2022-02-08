@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { TabledataService } from '../../services/tabledata.service';
 
 @Component({
   selector: 'app-user-form',
@@ -10,11 +12,21 @@ export class UserFormComponent implements OnInit {
 
   useradd:FormGroup;
 
-  constructor(private bob:FormBuilder) { 
+  constructor(private bob:FormBuilder, private ser:TabledataService, private route: Router) { 
 
-    this.useradd = this.bob.group(
+    this.useradd = this.bobfunc() ;
+    
+  }
+
+  ngOnInit(): void {
+  
+  }
+
+  bobfunc()
+  {
+    return this.bob.group(
       {
-        firstname: ['',[Validators.required, Validators.minLength(5)]],
+        firstname: ['',[Validators.required, Validators.minLength(5),Validators.maxLength(15)]],
         lastname: ['',[Validators.required,Validators.minLength(5)]],
         phone: ['',[Validators.required,Validators.minLength(10)]],
         elemail: ['',[Validators.required,Validators.email]]
@@ -22,12 +34,11 @@ export class UserFormComponent implements OnInit {
     )
   }
 
-  ngOnInit(): void {
-  
-  }
-
-  final()
+  createuser()
   {
-    alert(this.useradd.value.lastname)
-  }
+    this.ser.saveuser(this.useradd.value).subscribe(() => {
+      alert(this.useradd.value.firstname);
+      this.route.navigate(['./react/list'])
+    })
+}
 }
