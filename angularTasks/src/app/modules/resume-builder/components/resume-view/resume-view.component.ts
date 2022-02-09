@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Resumedata } from '../../models/modeldata.model';
+import { ResumeServiceService } from '../../services/resume-service.service';
 
 @Component({
   selector: 'app-resume-view',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResumeViewComponent implements OnInit {
 
-  constructor() { }
+  tableadd:Resumedata[]
+
+  constructor(private ser: ResumeServiceService) { }
 
   ngOnInit(): void {
+    this.display()
   }
 
+  display()
+  {
+    this.ser.getresumedata().subscribe((m) => {
+      this.tableadd = m;
+    })
+  }
 }

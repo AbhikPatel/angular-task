@@ -29,9 +29,7 @@ export class CompanyService {
   {
     return this.http.get<User>(`${this.api}employeedb/${id}`)
   }
-
-
-
+  
   updatedata(id:number, para:User):Observable<User>
   {
     return this.http.put<User>(`${this.api}employeedb/${id}`,para)

@@ -10,6 +10,17 @@
       "birth": "2022-02-08",
       "depart": "4",
       "id": 1
+    },
+    {
+      "firstname": "Abhishek",
+      "lastname": "Patel",
+      "phone": 9925607945,
+      "elemail": "abhikpatel15@gmail.com",
+      "umer": "78",
+      "gen": "Male",
+      "birth": "2022-02-22",
+      "depart": "2",
+      "id": 2
     }
   ],
   "department": [
@@ -28,6 +39,15 @@
     {
       "id": 4,
       "name": "Database"
+    }
+  ],
+  "resumedata": [
+    {
+      "firstname": "Abhishek Kishorbhai Patel",
+      "position": "Pro Level Frontend Developer 60LPA",
+      "elemail": "abhikpatel15@gmail.com",
+      "phone": "09925607945",
+      "id": 1
     }
   ]
 }

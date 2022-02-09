@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Department } from '../../models/ceo.model';
 import { CompanyService } from '../../services/company.service';
@@ -35,8 +35,6 @@ export class EmployeeFormComponent implements OnInit {
     {
       this.ser.getbyid(this.getid).subscribe((m) => {
         this.useradd.patchValue(m)
-        console.log(m);
-        
       })
     }
   }
@@ -93,6 +91,7 @@ export class EmployeeFormComponent implements OnInit {
   get gen() { return this.useradd.get('gen') }
   get birth() { return this.useradd.get('birth') }
   get depart() { return this.useradd.get('depart') }
+  get skillfunc() { return this.useradd.get('skillfunc') }
 
 
   getdepart()

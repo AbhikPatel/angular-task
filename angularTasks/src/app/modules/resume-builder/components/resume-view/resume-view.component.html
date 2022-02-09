@@ -2,14 +2,14 @@
     <!-- Header Section  -->
     <table>
         <tr>
-            <th style="text-align: left; width: 600px; vertical-align: top;">
-                <h1 style="margin: 0;"> JONATHAN DOE </h1>
-                <h3 style="font-style: italic;"> WEB DESIGNER, DIRECTOR</h3>
+            <th style="text-align: left; width: 600px; vertical-align: top;" *ngFor="let m of tableadd">
+                <h1 style="margin: 0;"> {{m.firstname}} </h1>
+                <h3 style="font-style: italic;"> {{ m.position}}</h3>
             </th>
-            <th style="text-align: left; vertical-align: top;">
+            <th style="text-align: left; vertical-align: top;" *ngFor="let m of tableadd">
                 <button> Download PDF</button>
-                <a href="mailto:name@yourdomain.com" style="color: red;">name@yourdomain.com</a>
-                <p style="margin: 0;">(313)-867-5368</p>
+                <p style="color: red;">{{ m.elemail }}</p>
+                <p style="margin: 0;"> {{m.phone}} </p>
             </th>
         </tr>
     </table>
@@ -131,7 +131,15 @@
 
         </tr>
     </table>
-    <p style="text-align: center;">
-        Jonathan Doe - <a href="mailto:name@yourdomain.com" style="color: red;">name@yourdomain.com</a> - (313)-871-5309
-    </p>
+    <table style="display: flex; justify-content: center;" *ngFor="let m of tableadd">
+        <tr>
+            <td style="padding: 0 10px;"> {{m.firstname}}</td>
+            <td style="padding: 0 10px; color: red;"> {{m.elemail}}</td>
+            <td style="padding: 0 10px;"> {{m.phone}}</td>
+        </tr>
+    </table>
 </section>
+
+<p>
+    <button routerLink="/resume/resumeform"> Back to form</button>
+</p>

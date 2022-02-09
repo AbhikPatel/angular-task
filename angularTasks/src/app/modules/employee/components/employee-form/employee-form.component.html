@@ -67,6 +67,13 @@
             <span *ngIf="depart && depart.invalid && depart.touched"> This Field is Invalid.</span>
         </div>
     </div>
+
+    <!-- <div class="space">
+        <label for="skills"> Skills :- </label>
+        <p formArrayName = "skillarr" *ngFor="let m of useradd.get('skillarr').controls; let i = index">
+            <input type="text" name="skills" id="skills" formControlName = "skill">
+        </p>
+    </div> -->
     <div class="space">
         <button (click)="onsubmit()" [disabled]="!useradd.valid"> Submit </button>
     </div>
