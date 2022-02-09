@@ -1,12 +1,3 @@
 {
-  "employeedb": [
-    {
-      "firstname": "Abhishek",
-      "lastname": "Patel",
-      "phone": 9925607945,
-      "elemail": "abhikpatel15@gmail.com",
-      "umer": "22",
-      "id": 1
-    }
-  ]
+  "employeedb": []
 }

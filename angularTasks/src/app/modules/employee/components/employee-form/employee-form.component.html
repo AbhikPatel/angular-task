@@ -1,45 +1,61 @@
 <form [formGroup]="useradd">
-    <p>
+    <h2> Registration Form </h2>
+    <div class="space">
         <label for="fname"> First Name :- </label>
-        <input type="text" name="fname" id="fname" formControlName="firstname">
-        <span *ngIf="useradd.get('firstname')?.touched && useradd.get('firstname')?.hasError('required')"> This field is required </span>
-        <span *ngIf="useradd.get('firstname')?.touched && useradd.get('firstname')?.hasError('minlength')"> Enter minimum 5 Character </span>
-        <span *ngIf="useradd.get('firstname')?.touched && useradd.get('firstname')?.hasError('maxlength')"> Enter Maximum 10 Character </span>
-    </p>
-    <p>
+        <p>
+            <input type="text" name="fname" id="fname" formControlName="firstname">
+            <span *ngIf="firstname && firstname.invalid && firstname.touched"> This Field is Invalid.</span>
+        </p>
+    </div>
+    
+    <div class="space">
         <label for="lname"> Last Name :- </label>
-        <input type="text" name="lname" id="lname" formControlName="lastname">
-        <span *ngIf="useradd.get('lastname')?.touched && useradd.get('lastname')?.hasError('required')"> This field is required </span>
-        <span *ngIf="useradd.get('lastname')?.touched && useradd.get('lastname')?.hasError('minlength')"> Enter minimum 5 Character </span>
-    </p>
-    <p>
+        <p>
+            <input type="text" name="lname" id="lname" formControlName="lastname">
+            <span *ngIf="lastname && lastname.invalid && lastname.touched"> This Field is Invalid.</span>
+        </p>
+    </div>
+    
+    <div class="space">
         <label for="phone"> Phone Number :- </label>
-        <input type="number" name="phone" id="phone" formControlName="phone">
-        <span *ngIf="useradd.get('phone')?.touched && useradd.get('phone')?.hasError('required')"> This field is required </span>
-    </p>
-    <p>
+        <p>
+            <input type="number" name="phone" id="phone" formControlName="phone">
+            <span *ngIf="phone && phone.invalid && phone.touched"> This Field is Invalid.</span>
+        </p>
+    </div>
+    
+    <div class="space">
         <label for="mail"> Email :- </label>
-        <input type="text" name="mail" id="mail" formControlName="elemail">
-        <span *ngIf="useradd.get('elemail')?.touched && useradd.get('elemail')?.hasError('required')"> This field is required </span>
-        <span *ngIf="useradd.get('elemail')?.touched && useradd.get('elemail')?.hasError('email')"> Enter Valid Email </span>
-    </p>
-    <p>
+        <p>
+            <input type="text" name="mail" id="mail" formControlName="elemail">
+            <span *ngIf="elemail && elemail.invalid && elemail.touched"> This Field is Invalid.</span>
+        </p>
+    </div>
+        
+    <div class="space">
         <label for="age"> Age :- </label>
-        <input type="text" name="age" id="age" formControlName="umer">
-        <span *ngIf="useradd.get('age')?.touched && useradd.get('age')?.hasError('required')"> This field is required </span>
-    </p>
-    <!-- <p>
+        <p>
+            <input type="text" name="age" id="age" formControlName="umer">
+            <span *ngIf="umer && umer.invalid && umer.touched"> This Field is Invalid.</span>
+        </p>
+    </div>
+    
+    <div class="space">
         <label for="gender"> Gender:- </label>
-        <input type="radio" name="gender" id="male" formControlName="gen">
-        <label for="male"> Male </label>
-        <input type="radio" name="gender" id="female" formControlName="gen">
-        <label for="female"> Female </label>
-        <span *ngIf="useradd.get('gen')?.touched && useradd.get('gen')?.hasError('required')"> This field is required </span>
-    </p>
-    <p>
+        <div>
+            <input type="radio" name="gender" id="male" value="Male" formControlName="gen">
+            <label for="male"> Male </label>
+            <input type="radio" name="gender" id="female" value="Female" formControlName="gen">
+            <label for="female"> Female </label>
+        </div>
+    </div>
+    <!-- <div class="space">
         <label for="dob"> Date of Birth :- </label>
         <input type="date" name="dob" id="dob" formControlName="birth">
-    </p> -->
-    <br><br><br>
-    <button (click)="nav()"> Submit </button>
+    </div> -->
+    
+    <div class="space">
+        <button (click)="nav()"> Submit </button>
+    </div>
+    
 </form>

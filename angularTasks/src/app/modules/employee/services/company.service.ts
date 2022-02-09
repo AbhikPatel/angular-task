@@ -25,6 +25,8 @@ export class CompanyService {
     return this.http.get<User[]>(`${this.api}employeedb`)
   }
 
+ 
+
   deldata(id:number):Observable<User[]>
   {
     return this.http.delete<User[]>(`${this.api}employeedb/${id}`)

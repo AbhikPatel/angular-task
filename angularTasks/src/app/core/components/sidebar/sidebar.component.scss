@@ -1,0 +1,31 @@
+:host{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background-color: #313131;
+    text-align: right;
+}
+
+h1{
+    color: #ffbb00;
+    padding: 30px 40px;
+}
+
+ul{
+    list-style: none;
+    padding: 50px 0;
+    
+    li{
+        margin: 50px 0;
+
+        a{
+            text-decoration: none;
+            padding: 0 50px;
+            color: white;
+
+            &.active{
+                color: #ffbb00;
+            }
+        }
+    }
+}

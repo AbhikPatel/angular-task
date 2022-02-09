@@ -1,4 +1,6 @@
-<button routerLink="/employee/form"> Add user</button>
+<p>
+    <button routerLink="/employee/form"> Add user</button>
+</p>
 
 <table>
     <thead>
@@ -8,6 +10,7 @@
             <th> Phone Number </th>
             <th> Email </th>
             <th> Age </th>
+            <th> Gender </th>
             <th colspan="2"> Action </th>
         </tr>
     </thead>
@@ -18,6 +21,7 @@
             <td> {{m.phone}} </td>
             <td> {{m.elemail}} </td>
             <td> {{m.umer}} </td>
+            <td> {{m.gen}} </td>
             <td> <button (click)="deletedata(m.id)"> Delete </button> </td>
             <td> <button> Edit </button> </td>
 

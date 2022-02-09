@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { User } from '../../models/ceo.model';
 import { CompanyService } from '../../services/company.service';
 
@@ -10,7 +11,7 @@ import { CompanyService } from '../../services/company.service';
 export class EmployeeListComponent implements OnInit {
 
   listdata:User[]
-
+  useradd:FormGroup[]
   constructor(private ser:CompanyService) { }
 
   ngOnInit(): void {
@@ -28,9 +29,12 @@ export class EmployeeListComponent implements OnInit {
   deletedata(id:number)
   {
     this.ser.deldata(id).subscribe(() =>{
+      alert('Data is Deleted');
       this.display();
     })
   }
+
+ 
 
 
 }

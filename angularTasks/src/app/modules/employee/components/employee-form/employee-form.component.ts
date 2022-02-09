@@ -27,7 +27,8 @@ export class EmployeeFormComponent implements OnInit {
         lastname:['',[Validators.required,Validators.minLength(5)]],
         phone:['',[Validators.required,Validators.minLength(10)]],
         elemail:['',[Validators.required,Validators.email]],
-        umer:['',[Validators.required]]
+        umer:['',[Validators.required,Validators.maxLength(2)]],
+        gen:['',[Validators.required]],
       }
     )
   }
@@ -35,8 +36,15 @@ export class EmployeeFormComponent implements OnInit {
   nav()
   {
     this.ser.postdata(this.useradd.value).subscribe(() => {
-      alert('Data is Saved go to list')
+      alert('Data is Saved')
+      this.route.navigate(['/employee/list']);
     })
-    this.route.navigate(['/employee/list']);
   }
+
+
+  get firstname() { return this.useradd.get('firstname') }
+  get lastname() { return this.useradd.get('lastname') }
+  get phone() { return this.useradd.get('phone') }
+  get elemail() { return this.useradd.get('elemail') }
+  get umer() { return this.useradd.get('umer') }
 }
