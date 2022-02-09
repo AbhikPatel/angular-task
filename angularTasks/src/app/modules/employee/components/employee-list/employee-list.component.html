@@ -11,7 +11,9 @@
             <th> Email </th>
             <th> Age </th>
             <th> Gender </th>
-            <th colspan="2"> Action </th>
+            <th> Date of Birth </th>
+            <th> Department </th>
+            <th > Action </th>
         </tr>
     </thead>
     <tbody>
@@ -22,8 +24,9 @@
             <td> {{m.elemail}} </td>
             <td> {{m.umer}} </td>
             <td> {{m.gen}} </td>
-            <td> <button (click)="deletedata(m.id)"> Delete </button> </td>
-            <td> <button> Edit </button> </td>
+            <td> {{m.birth}} </td>
+            <td> {{m.depart | idFilter:departfilter}} </td>
+            <td><i routerLink="../edit/{{m.id}}" class='bx bxs-edit-alt'></i><i (click)="deletedata(m.id)" class='bx bxs-trash'></i></td>
 
         </tr>
     </tbody>

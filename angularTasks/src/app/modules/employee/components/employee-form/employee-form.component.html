@@ -43,19 +43,32 @@
     <div class="space">
         <label for="gender"> Gender:- </label>
         <div>
-            <input type="radio" name="gender" id="male" value="Male" formControlName="gen">
+            <input type="radio" name="gen" id="male" value="Male" formControlName="gen">
             <label for="male"> Male </label>
-            <input type="radio" name="gender" id="female" value="Female" formControlName="gen">
+            <input type="radio" name="gen" id="female" value="Female" formControlName="gen">
             <label for="female"> Female </label>
+            <span *ngIf="gen && gen.invalid && gen.touched"> This Field is Invalid.</span>
         </div>
     </div>
-    <!-- <div class="space">
+    <div class="space">
         <label for="dob"> Date of Birth :- </label>
         <input type="date" name="dob" id="dob" formControlName="birth">
-    </div> -->
-    
+        <span *ngIf="birth && birth.invalid && birth.touched"> This Field is Invalid.</span>
+    </div>
+
     <div class="space">
-        <button (click)="nav()"> Submit </button>
+        <label for="department"> Department:- </label>
+        <div>
+            <select id="department" name="department" formControlName="depart">
+                <option *ngFor="let d of department" [value]="d.id">
+                    {{ d.name }}
+                </option>
+            </select>
+            <span *ngIf="depart && depart.invalid && depart.touched"> This Field is Invalid.</span>
+        </div>
+    </div>
+    <div class="space">
+        <button (click)="onsubmit()" [disabled]="!useradd.valid"> Submit </button>
     </div>
     
 </form>

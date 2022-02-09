@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { User } from '../../models/ceo.model';
+import { Department, User } from '../../models/ceo.model';
 import { CompanyService } from '../../services/company.service';
 
 @Component({
@@ -11,11 +11,12 @@ import { CompanyService } from '../../services/company.service';
 export class EmployeeListComponent implements OnInit {
 
   listdata:User[]
+  departfilter:Department[]
   useradd:FormGroup[]
   constructor(private ser:CompanyService) { }
 
   ngOnInit(): void {
-    
+    this.getdepartdata()
     this.display();
   }
 
@@ -23,6 +24,12 @@ export class EmployeeListComponent implements OnInit {
   {
     this.ser.getdata().subscribe(m => {
       this.listdata = m
+    })
+  }
+
+  getdepartdata(){
+    this.ser.getdepart().subscribe((m) => {
+      this.departfilter =m
     })
   }
 

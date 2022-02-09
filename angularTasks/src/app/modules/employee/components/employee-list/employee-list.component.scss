@@ -20,6 +20,11 @@ button{
     font-weight: 600;
 }
 
+.bx{
+    padding: 0 5px;
+    color: #ffbb00;
+    transform: scale(1.2,1.2);
+}
 
 table,td,th{
     border-collapse: collapse;
@@ -27,6 +32,7 @@ table,td,th{
     border: 1px solid #ffbb00;
     text-align: center;
     color: white;
+    cursor: pointer;
 }
 
 th{
@@ -35,6 +41,6 @@ th{
 }
 
 table{
-    width: 900px;
+    width: 90%;
     margin: 0 auto;
 }

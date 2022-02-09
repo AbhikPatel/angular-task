@@ -5,5 +5,12 @@ export interface User{
     phone:string,
     elemail:string,
     umer:number,
-    gen:string
+    gen:string,
+    birth:Date,
+    depart:number
+}
+
+export interface Department{
+    id:number,
+    name:string
 }

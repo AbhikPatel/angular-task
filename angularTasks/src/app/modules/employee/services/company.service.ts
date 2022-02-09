@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { User } from '../models/ceo.model';
+import { Department, User } from '../models/ceo.model';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +25,17 @@ export class CompanyService {
     return this.http.get<User[]>(`${this.api}employeedb`)
   }
 
+  getbyid(id:number):Observable<User>
+  {
+    return this.http.get<User>(`${this.api}employeedb/${id}`)
+  }
+
+
+
+  updatedata(id:number, para:User):Observable<User>
+  {
+    return this.http.put<User>(`${this.api}employeedb/${id}`,para)
+  }
  
 
   deldata(id:number):Observable<User[]>
@@ -32,7 +43,10 @@ export class CompanyService {
     return this.http.delete<User[]>(`${this.api}employeedb/${id}`)
   }
 
-  
+  getdepart():Observable<Department[]>
+  {
+    return this.http.get<Department[]>(`${this.api}department`)
+  }
 
   
 }
