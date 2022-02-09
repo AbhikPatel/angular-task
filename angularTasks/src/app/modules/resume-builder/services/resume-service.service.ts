@@ -9,7 +9,6 @@ import { Resumedata } from '../models/modeldata.model';
 })
 export class ResumeServiceService {
 
-  createdsubject = new Subject<Resumedata[]>();
 
   resumeapi:string
   constructor(private http:HttpClient) { 

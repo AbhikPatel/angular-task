@@ -56,12 +56,12 @@
             <td style="width: 180px; vertical-align: top; font-style: italic;"> Technical</td>
             <td>
                 <table style="border-bottom: none; padding: 0; border-collapse: collapse;">
-                    <tr style="border-bottom: 1px solid #dddddd;">
-                        <td style="width: 180px;">XHTML</td>
+                    <tr style="border-bottom: 1px solid #dddddd;" *ngFor="let m of tableadd">
+                        <td style="width: 180px;">{{m.technical}}</td>
                         <td style="width: 200px;">Jquery</td>
                         <td>OS X</td>
                     </tr>
-                    <tr style="border-bottom: 1px solid #dddddd;">
+                    <!-- <tr style="border-bottom: 1px solid #dddddd;">  
                         <td>CSS</td>
                         <td>PHP</td>
                         <td>Windows XP/Vista</td>
@@ -70,7 +70,7 @@
                         <td>Javascript</td>
                         <td>PHP</td>
                         <td>Windows XP/Vista</td>
-                    </tr>
+                    </tr> -->
                 </table>
             </td>
         </tr>
@@ -78,13 +78,13 @@
 
     <!-- Experience Section  -->
     <table>
-        <tr>
+        <tr *ngFor="let m of tableadd">
             <td style="width: 180px; vertical-align: top; font-style: italic;">Experience</td>
             <td>
                 <table style="padding: 0;">
                     <tr>
                         <td style="width: 470px;">
-                            <h3>Facebook</h3>
+                            <!-- <h3>{{m.company}}</h3> -->
                         </td>
                         <td>2005-2007</td>
                     </tr>

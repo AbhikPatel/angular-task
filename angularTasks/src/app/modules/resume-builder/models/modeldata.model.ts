@@ -3,5 +3,14 @@ export interface Resumedata{
     firstname: string,
     position: string,
     elemail:string,
-    phone:number 
+    phone:number,
+    technical:string[],
+    experience:Experience[] 
+}
+
+interface Experience{
+    company:string,
+    role:string,
+    startyear:number,
+    endyear:number
 }

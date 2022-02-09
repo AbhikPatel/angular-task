@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ResumeServiceService } from '../../services/resume-service.service';
 
@@ -23,20 +23,58 @@ export class ResumeFormComponent implements OnInit {
         firstname:['',[Validators.required,Validators.minLength(5)]],
         position:['',[Validators.required]],
         elemail:['',[Validators.required,Validators.email]],
-        phone:['',[Validators.required],Validators.maxLength(10)],
+        phone:['',[Validators.required,Validators.minLength(10),Validators.maxLength(12)]],
+        technical: this.bob.array([]),
+        experience: this.bob.array([]),
       }
     )
   }
 
+  
   get firstname() { return this.resumeadd.get('firstname') }
   get position() { return this.resumeadd.get('position') }
   get elemail() { return this.resumeadd.get('elemail') }
   get phone() { return this.resumeadd.get('phone') }
+  // get technical() { return this.resumeadd.get('technical') }
 
   ngOnInit(): void {
+
+    this.addfield();
+    this.addexgroup();
+  }
+  
+  formarr(arrname:string):FormArray{
+    return this.resumeadd.controls[arrname] as FormArray;
+  }
+  
+
+  addfield(){
+    this.formarr('technical').push(
+      this.bob.control('',)
+    )
   }
 
-  
+  addexgroup()
+  {
+    this.formarr('experience').push(
+      this.bob.group(
+        {
+          company:['',[Validators.required]],
+          role:['',[Validators.required]],
+          startyear:['',[Validators.required,Validators.maxLength(4)]],
+          endyear:['',[Validators.required,Validators.maxLength(4)]],
+        }
+      )
+    )
+  }
+
+  removefield(index: number){
+    this.formarr('technical').removeAt(index);
+  }
+
+  removeexgroup(index: number){
+    this.formarr('experience').removeAt(index);
+  }
   
   savedata(){
 
@@ -50,5 +88,6 @@ export class ResumeFormComponent implements OnInit {
     })
       
   }
+
   
 }

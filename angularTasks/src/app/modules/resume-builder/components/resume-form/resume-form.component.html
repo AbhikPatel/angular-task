@@ -1,37 +1,96 @@
 <form [formGroup]="resumeadd">
     <h2> Resume Form </h2>
+    <fieldset>
+        <legend> Personal Detailes</legend>
+        <div class="space">
+            <label for="fname"> Full Name :-</label>
+            <p>
+                <input type="text" name="fname" id="fname" formControlName="firstname">
+                <span *ngIf="firstname && firstname.touched && firstname.invalid"> This field is invalid</span>
+            </p>
+        </div>
+        <div class="space">
+            <label for="position"> Occupation :-</label>
+            <p>
+                <input type="text" name="position" id="position" formControlName="position">
+                <span *ngIf="position && position.touched && position.invalid"> This field is invalid</span>
+            </p>
+        </div>
+        <div class="space">
+            <label for="mail"> Email :-</label>
+            <p>
+                <input type="text" name="mail" id="mail" formControlName="elemail">
+                <span *ngIf="elemail && elemail.touched && elemail.invalid"> This field is invalid</span>
+            </p>
+        </div>
+        <div class="space">
+            <label for="num"> Phone Number :-</label>
+            <p>
+                <input type="text" name="num" id="num" formControlName="phone">
+                <span *ngIf="phone && phone.touched && phone.invalid"> This field is invalid</span>
+            </p>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend> Skills</legend>
+        <div class="outer d-flex f-direct">
+            <div class="array d-flex j-between" formArrayName='technical'
+                *ngFor="let m of this.formarr('technical').controls; let i = index;">
+
+                <input type="text" [formControlName]="i">
+                <button (click)="removefield(i)"> Remove </button>
+
+            </div>
+            <p class="d-flex j-between">
+                <span></span>
+                <button (click)="addfield()"> Add </button>
+            </p>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend> Biodata</legend>
+        <div class="outer d-flex f-direct">
+            <div class="array d-flex f-direct" formArrayName = 'experience' *ngFor="let ex of this.formarr('experience').controls; let i = index">
+                <fieldset>
+                    <legend>Experience {{i + 1}}</legend>
+                    <div class="space">
+                        <label for="company"> Company Name :- </label>
+                        <p>
+                            <input type="text" name="company" id="company" formControlName="company">
+                        </p>
+                    </div>
+                    <div class="space">
+                        <label for="role"> Company Role :- </label>
+                        <p>
+                            <input type="text" name="role" id="role" formControlName="role">
+                        </p>
+                    </div>
+                    <div class="space">
+                        <label for="startyear"> Start Year :- </label>
+                        <p>
+                            <input type="text" name="startyear" id="startyear" formControlName="startyear">
+                        </p>
+                    </div>
+                    <div class="space">
+                        <label for="endyear"> End Year :- </label>
+                        <p>
+                            <input type="text" name="endyear" id="endyear" formControlName="endyear">
+                        </p>
+                    </div>
+                    <p>
+                        <button (click)="removeexgroup(i)" >Delete</button>
+                    </p>
+                </fieldset>
+            </div>
+        </div>
+        <button (click)="addexgroup()" > Add </button>
+    </fieldset>
+  
 
     <div class="space">
-        <label for="fname"> Full Name :-</label>
-        <p>
-            <input type="text" name="fname" id="fname" formControlName = "firstname">
-            <span *ngIf="firstname && firstname.touched && firstname.invalid"> This field is invalid</span>
-        </p>
-    </div>
-    <div class="space">
-        <label for="position"> Occupation :-</label>
-        <p>
-            <input type="text" name="position" id="position" formControlName = "position">
-            <span *ngIf="position && position.touched && position.invalid"> This field is invalid</span>
-        </p>
-    </div>
-    <div class="space">
-        <label for="mail"> Email :-</label>
-        <p>
-            <input type="text" name="mail" id="mail" formControlName = "elemail">
-            <span *ngIf="elemail && elemail.touched && elemail.invalid"> This field is invalid</span>
-        </p>
-    </div>
-    <div class="space">
-        <label for="num"> Phone Number :-</label>
-        <p>
-            <input type="text" name="num" id="num" formControlName = "phone">
-            <span *ngIf="phone && phone.touched && phone.invalid"> This field is invalid</span>
-        </p>
+        <button (click)="savedata()" [disabled]="!resumeadd.valid">Submit</button>
     </div>
 
-    <div class="space">
-        <button (click)="savedata()" >Submit</button>
-    </div>
-    
 </form>

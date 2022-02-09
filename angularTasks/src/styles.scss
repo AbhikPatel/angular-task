@@ -11,3 +11,23 @@
 html, body{
     height: 100%;
 }
+
+.d-flex{
+    display: flex;
+}
+
+.j-center{
+    justify-content: center;
+}
+
+.a-items{
+    align-items: center;
+}
+
+.j-between{
+    justify-content: space-between;
+}
+
+.f-direct{
+    flex-direction: column;
+}
