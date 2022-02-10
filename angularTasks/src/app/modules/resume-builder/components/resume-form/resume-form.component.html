@@ -6,28 +6,28 @@
             <label for="fname"> Full Name :-</label>
             <p>
                 <input type="text" name="fname" id="fname" formControlName="firstname" autocomplete>
-                <span *ngIf="firstname && firstname.touched && firstname.invalid"> This Firstname field is invalid</span>
+                <span *ngIf="firstname && firstname.touched && firstname.invalid"> This field is invalid</span>
             </p>
         </div>
         <div class="space">
             <label for="position"> Occupation :-</label>
             <p>
                 <input type="text" name="position" id="position" formControlName="position">
-                <span *ngIf="position && position.touched && position.invalid">This Occupation is invalid</span>
+                <span *ngIf="position && position.touched && position.invalid"> This field is invalid</span>
             </p>
         </div>
         <div class="space">
             <label for="mail"> Email :-</label>
             <p>
                 <input type="text" name="mail" id="mail" formControlName="elemail">
-                <span *ngIf="elemail && elemail.touched && elemail.invalid"> Email is invalid</span>
+                <span *ngIf="elemail && elemail.touched && elemail.invalid"> This field is invalid</span>
             </p>
         </div>
         <div class="space">
             <label for="num"> Phone Number :-</label>
             <p>
                 <input type="text" name="num" id="num" formControlName="phone">
-                <span *ngIf="phone && phone.touched && phone.invalid"> This Number is invalid</span>
+                <span *ngIf="phone && phone.touched && phone.invalid"> This field is invalid</span>
             </p>
         </div>
     </fieldset>

@@ -32,18 +32,23 @@ export class ResumeFormComponent implements OnInit {
   }
 
   
-  get firstname() { return this.resumeadd.get('firstname') }
-  get position() { return this.resumeadd.get('position') }
-  get elemail() { return this.resumeadd.get('elemail') }
-  get phone() { return this.resumeadd.get('phone') }
-  get tech() { return this.resumeadd.get('technical') }
-  get company() { return this.resumeadd.get('company') }
-    get role() { return this.resumeadd.get('role') }
-    get startyear() { return this.resumeadd.get('experience') }
-    // get experience() { return this.resumeadd.controls["experience"] as FormArray}
-    get endyear() { return this.resumeadd.get('endyear') }
-    get school() { return this.resumeadd.get('education') }
-    get gpa() { return this.resumeadd.get('education') }  
+  // get test()
+  // {
+  //   return this.resumeadd.controls
+  // }
+
+  get firstname() { return this.resumeadd.get('firstname')}
+  get position() { return this.resumeadd.get('position')}
+  get elemail() { return this.resumeadd.get('elemail')}
+  get phone() { return this.resumeadd.get('phone')}
+  get tech() { return this.resumeadd.get('techical')}
+  get company() { return this.resumeadd.get('experience')}
+  get role() { return this.resumeadd.get('experience')}
+  get startyear() { return this.resumeadd.get('experience')}
+  get endyear() { return this.resumeadd.get('experience')}
+  get school() { return this.resumeadd.get('education')}
+  get gpa() { return this.resumeadd.get('education')}
+
 
   ngOnInit(): void {
 

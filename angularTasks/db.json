@@ -33,7 +33,7 @@
   "resumedata": [
     {
       "firstname": "Abhishek Kishorbhai Patel",
-      "position": "dsadad",
+      "position": "no idea",
       "elemail": "abhikpatel15@gmail.com",
       "phone": "09925607945",
       "technical": [
@@ -51,30 +51,43 @@
         },
         {
           "tech": "js"
+        },
+        {
+          "tech": "scss"
         }
       ],
       "experience": [
         {
           "company": "1rivet",
           "role": "frontend",
-          "startyear": "4252",
+          "startyear": "2021",
           "endyear": "2025"
         },
         {
+          "company": "tcs",
+          "role": "backend",
+          "startyear": "2026",
+          "endyear": "2030"
+        },
+        {
           "company": "google",
-          "role": "sdvs",
-          "startyear": "1254",
-          "endyear": "1256"
+          "role": "ceo",
+          "startyear": "2030",
+          "endyear": "2040"
         }
       ],
       "education": [
         {
-          "school": "dsvsdvsd",
-          "gpa": 42
+          "school": "convent",
+          "gpa": 9
         },
         {
-          "school": "svdsv",
-          "gpa": 12
+          "school": "jay ambe internation school",
+          "gpa": 9
+        },
+        {
+          "school": "utu",
+          "gpa": 10
         }
       ],
       "id": 1
