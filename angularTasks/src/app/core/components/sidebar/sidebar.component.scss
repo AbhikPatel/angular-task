@@ -1,48 +1,76 @@
-:host{
+// :host{
+//     border: 3px solid green;
+// }
+
+#bar{
     display: flex;
-    flex-direction: column;
-    flex: 0 0 250px;
+    width: 250px;
     text-align: right;
-    left: -250px;
-}
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid red;
 
-h1{
-    color: #2e56e5;
-    font-size: 1.25rem;
-    padding: 15px 10px;
-    border-bottom: 1px solid #f0f2f5;
-    text-align: left;
-}
-
-ul{
-    padding: 50px 0;
-    list-style: none;
-    text-align: left;
-    border-bottom: 1px solid #f0f2f5;
-    
-    li{
-        display: flex;
+    h1{
+        color: #2e56e5;
+        font-size: 1.25rem;
+        padding: 15px 10px;
+        border-bottom: 1px solid #d8d9db;
+        text-align: right;
         
-        a{
-            border-radius: 10px;
-            text-decoration: none;
-            color: black;
+    }
+
+    ul{
+        padding: 50px 0;
+        list-style: none;
+        text-align: left;
+        border-bottom: 1px solid #d8d9db;
+    
+        li{
             display: flex;
-            align-items: center;
-            flex-grow: 1;
-            margin: 10px;
-            padding: 10px;
+        
+            a{
+                border-radius: 10px;
+                text-decoration: none;
+                color: black;
+                display: flex;
+                align-items: center;
+                flex-grow: 1;
+                margin: 10px;
+                padding: 10px;
 
-            .bx{
-                padding: 0 10px;
-                transform: scale(1.2,1.2);
-            }
+                .bx{
+                    padding: 0 10px;
+                    transform: scale(1.2,1.2);
+                }
 
-            &.active{
-                background-color: #eaedfc;
-                color: #2e56e5;
-            }
+                &.active{
+                    background-color: #eaedfc;
+                    color: #2e56e5;
+                }
+            }  
         }
-
     }
 }
+#ham:checked ~ #bar{
+    background-color: red;
+}
+
+#ham:checked ~ ul li a span{
+    display: none;
+}
+
+
+#ham{
+    // display: none;
+}
+
+label{
+    // border: 1px solid red;
+    color: #2e56e5;
+    text-align: left;
+    font-size: 2.5rem;
+    position: absolute;
+    left: 10px;
+}
+
+

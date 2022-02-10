@@ -14,6 +14,7 @@ export class EmployeeFormComponent implements OnInit {
   isedit:boolean = false;
   department: Department[] ;
   getid:number;
+  btn:string;
   useradd:FormGroup;
   constructor(private route: Router, private bob:FormBuilder, private ser:CompanyService, private activeroute:ActivatedRoute) { 
     this.useradd = this.garbage();
@@ -36,6 +37,11 @@ export class EmployeeFormComponent implements OnInit {
       this.ser.getbyid(this.getid).subscribe((m) => {
         this.useradd.patchValue(m)
       })
+
+      this.btn = 'Update';
+    }
+    else{
+      this.btn = "Save";
     }
   }
 
@@ -45,7 +51,7 @@ export class EmployeeFormComponent implements OnInit {
       {
         firstname:['',[Validators.required,Validators.minLength(5),Validators.maxLength(15)]],
         lastname:['',[Validators.required,Validators.minLength(5)]],
-        phone:['',[Validators.required,Validators.minLength(10)]],
+        phone:['',[Validators.required,Validators.maxLength(10)]],
         elemail:['',[Validators.required,Validators.email]],
         umer:['',[Validators.required,Validators.maxLength(2)]],
         gen:['',[Validators.required]],
