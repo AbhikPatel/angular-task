@@ -9,12 +9,14 @@ import { ResumeServiceService } from '../../services/resume-service.service';
 })
 export class ResumeViewComponent implements OnInit {
 
-  tableadd:Resumedata[]
+  tableadd:Resumedata;
 
   constructor(private ser: ResumeServiceService) { }
 
   ngOnInit(): void {
     this.display()
+    console.log(this.tableadd);
+    
   }
 
   display()

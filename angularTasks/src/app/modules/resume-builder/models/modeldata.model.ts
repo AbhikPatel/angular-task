@@ -4,8 +4,13 @@ export interface Resumedata{
     position: string,
     elemail:string,
     phone:number,
-    technical:string[],
-    experience:Experience[] 
+    technical:Tech[],
+    experience:Experience[],
+    education:Education[] 
+}
+
+interface Tech{
+    tech:string
 }
 
 interface Experience{
@@ -13,4 +18,9 @@ interface Experience{
     role:string,
     startyear:number,
     endyear:number
+}
+
+interface Education{
+    school:string,
+    gpa:number
 }

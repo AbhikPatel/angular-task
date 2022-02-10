@@ -15,12 +15,12 @@ export class ResumeServiceService {
     this.resumeapi = environment.baseUrl
   }
 
-  postresumedata(formvalue:Resumedata):Observable<Resumedata[]>{
-    return this.http.post<Resumedata[]>(`${this.resumeapi}resumedata`,formvalue)
+  postresumedata(formvalue:Resumedata):Observable<Resumedata>{
+    return this.http.post<Resumedata>(`${this.resumeapi}resumedata`,formvalue)
   }
 
-  getresumedata():Observable<Resumedata[]>{
-    return this.http.get<Resumedata[]>(`${this.resumeapi}resumedata`)
+  getresumedata():Observable<Resumedata>{
+    return this.http.get<Resumedata>(`${this.resumeapi}resumedata/1`)
   }
 
   deleteresumedata(id:number):Observable<Resumedata>{

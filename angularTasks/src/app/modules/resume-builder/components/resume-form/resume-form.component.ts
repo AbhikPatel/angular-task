@@ -26,6 +26,7 @@ export class ResumeFormComponent implements OnInit {
         phone:['',[Validators.required,Validators.minLength(10),Validators.maxLength(12)]],
         technical: this.bob.array([]),
         experience: this.bob.array([]),
+        education: this.bob.array([]),
       }
     )
   }
@@ -35,7 +36,14 @@ export class ResumeFormComponent implements OnInit {
   get position() { return this.resumeadd.get('position') }
   get elemail() { return this.resumeadd.get('elemail') }
   get phone() { return this.resumeadd.get('phone') }
-  // get technical() { return this.resumeadd.get('technical') }
+  get tech() { return this.resumeadd.get('technical') }
+  get company() { return this.resumeadd.get('company') }
+    get role() { return this.resumeadd.get('role') }
+    get startyear() { return this.resumeadd.get('experience') }
+    // get experience() { return this.resumeadd.controls["experience"] as FormArray}
+    get endyear() { return this.resumeadd.get('endyear') }
+    get school() { return this.resumeadd.get('education') }
+    get gpa() { return this.resumeadd.get('education') }  
 
   ngOnInit(): void {
 
@@ -50,7 +58,9 @@ export class ResumeFormComponent implements OnInit {
 
   addfield(){
     this.formarr('technical').push(
-      this.bob.control('',)
+      this.bob.group({
+        tech: ['',[Validators.required]]
+      })
     )
   }
 
@@ -61,8 +71,20 @@ export class ResumeFormComponent implements OnInit {
         {
           company:['',[Validators.required]],
           role:['',[Validators.required]],
-          startyear:['',[Validators.required,Validators.maxLength(4)]],
-          endyear:['',[Validators.required,Validators.maxLength(4)]],
+          startyear:['',[Validators.required,Validators.minLength(4)]],
+          endyear:['',[Validators.required,Validators.minLength(4)]],
+        }
+      )
+    )
+  }
+
+  addedu()
+  {
+    this.formarr('education').push(
+      this.bob.group(
+        {
+          school:['',[Validators.required]],
+          gpa:['',[Validators.required,Validators.maxLength(3)]],
         }
       )
     )
@@ -74,6 +96,10 @@ export class ResumeFormComponent implements OnInit {
 
   removeexgroup(index: number){
     this.formarr('experience').removeAt(index);
+  }
+
+  removeedu(index: number){
+    this.formarr('education').removeAt(index);
   }
   
   savedata(){
@@ -87,6 +113,8 @@ export class ResumeFormComponent implements OnInit {
       })
     })
       
+    console.log(this.resumeadd.value);
+    
   }
 
   

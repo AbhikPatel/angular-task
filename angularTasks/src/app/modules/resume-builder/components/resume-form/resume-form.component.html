@@ -5,29 +5,29 @@
         <div class="space">
             <label for="fname"> Full Name :-</label>
             <p>
-                <input type="text" name="fname" id="fname" formControlName="firstname">
-                <span *ngIf="firstname && firstname.touched && firstname.invalid"> This field is invalid</span>
+                <input type="text" name="fname" id="fname" formControlName="firstname" autocomplete>
+                <span *ngIf="firstname && firstname.touched && firstname.invalid"> This Firstname field is invalid</span>
             </p>
         </div>
         <div class="space">
             <label for="position"> Occupation :-</label>
             <p>
                 <input type="text" name="position" id="position" formControlName="position">
-                <span *ngIf="position && position.touched && position.invalid"> This field is invalid</span>
+                <span *ngIf="position && position.touched && position.invalid">This Occupation is invalid</span>
             </p>
         </div>
         <div class="space">
             <label for="mail"> Email :-</label>
             <p>
                 <input type="text" name="mail" id="mail" formControlName="elemail">
-                <span *ngIf="elemail && elemail.touched && elemail.invalid"> This field is invalid</span>
+                <span *ngIf="elemail && elemail.touched && elemail.invalid"> Email is invalid</span>
             </p>
         </div>
         <div class="space">
             <label for="num"> Phone Number :-</label>
             <p>
                 <input type="text" name="num" id="num" formControlName="phone">
-                <span *ngIf="phone && phone.touched && phone.invalid"> This field is invalid</span>
+                <span *ngIf="phone && phone.touched && phone.invalid"> This Number is invalid</span>
             </p>
         </div>
     </fieldset>
@@ -37,9 +37,11 @@
         <div class="outer d-flex f-direct">
             <div class="array d-flex j-between" formArrayName='technical'
                 *ngFor="let m of this.formarr('technical').controls; let i = index;">
-
-                <input type="text" [formControlName]="i">
-                <button (click)="removefield(i)"> Remove </button>
+                <small [formGroupName] = "i">
+                    <input type="text" formControlName = "tech">
+                    <button (click)="removefield(i)"> Remove </button>
+                    <span *ngIf="tech && tech.touched && tech.invalid"> This field is invalid</span>
+                </small>
 
             </div>
             <p class="d-flex j-between">
@@ -53,30 +55,37 @@
         <legend> Biodata</legend>
         <div class="outer d-flex f-direct">
             <div class="array d-flex f-direct" formArrayName = 'experience' *ngFor="let ex of this.formarr('experience').controls; let i = index">
-                <fieldset>
+                <fieldset [formGroupName] = "i">
                     <legend>Experience {{i + 1}}</legend>
                     <div class="space">
-                        <label for="company"> Company Name :- </label>
-                        <p>
-                            <input type="text" name="company" id="company" formControlName="company">
-                        </p>
+                        <label for="companyid"> Company Name :- </label>
+                        <div>
+                            <p>
+                                <input type="text" name="companyid" id="companyid" formControlName="company">
+                                <span *ngIf="company && company.touched && company.invalid"> This field is invalid</span>
+                            </p>
+                        </div>
                     </div>
                     <div class="space">
                         <label for="role"> Company Role :- </label>
                         <p>
                             <input type="text" name="role" id="role" formControlName="role">
+                            <span *ngIf="role && role.touched && role.invalid"> This field is invalid</span>
                         </p>
                     </div>
                     <div class="space">
                         <label for="startyear"> Start Year :- </label>
                         <p>
                             <input type="text" name="startyear" id="startyear" formControlName="startyear">
+                            <span *ngIf="startyear && startyear.touched && startyear.invalid"> This field is invalid</span>
+                            <!-- <span *ngIf="experience.controls[i].get('startyear')">This is invalid</span> -->
                         </p>
                     </div>
                     <div class="space">
                         <label for="endyear"> End Year :- </label>
                         <p>
                             <input type="text" name="endyear" id="endyear" formControlName="endyear">
+                            <span *ngIf="endyear && endyear.touched && endyear.invalid"> This field is invalid</span>
                         </p>
                     </div>
                     <p>
@@ -86,6 +95,36 @@
             </div>
         </div>
         <button (click)="addexgroup()" > Add </button>
+    </fieldset>
+    <fieldset>
+        <legend> Education</legend>
+        <div class="outer d-flex f-direct">
+            <div class="array d-flex f-direct" formArrayName = 'education' *ngFor="let ex of this.formarr('education').controls; let i = index">
+                <fieldset [formGroupName] = "i">
+                    <legend>Education {{i + 1}}</legend>
+                    <div class="space">
+                        <label for="school"> Institue Name :- </label>
+                        <div>
+                            <p>
+                                <input type="text" name="school" id="school" formControlName="school">
+                                <span *ngIf="school && school.touched && school.invalid"> This field is invalid</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="space">
+                        <label for="gpa"> GPA :- </label>
+                        <p>
+                            <input type="number" name="gpa" id="gpa" formControlName="gpa">
+                            <span *ngIf="gpa && gpa.touched && gpa.invalid"> This field is invalid</span>
+                        </p>
+                    </div>
+                    <p>
+                        <button (click)="removeedu(i)" >Delete</button>
+                    </p>
+                </fieldset>
+            </div>
+        </div>
+        <button (click)="addedu()" > Add </button>
     </fieldset>
   
 

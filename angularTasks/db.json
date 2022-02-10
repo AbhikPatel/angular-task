@@ -33,19 +33,48 @@
   "resumedata": [
     {
       "firstname": "Abhishek Kishorbhai Patel",
-      "position": "ui developer",
+      "position": "dsadad",
       "elemail": "abhikpatel15@gmail.com",
       "phone": "09925607945",
       "technical": [
-        "chess",
-        "cuboo"
+        {
+          "tech": "chess"
+        },
+        {
+          "tech": "cube"
+        },
+        {
+          "tech": "html"
+        },
+        {
+          "tech": "css"
+        },
+        {
+          "tech": "js"
+        }
       ],
       "experience": [
         {
-          "company": "",
-          "role": "",
-          "startyear": "",
-          "endyear": ""
+          "company": "1rivet",
+          "role": "frontend",
+          "startyear": "4252",
+          "endyear": "2025"
+        },
+        {
+          "company": "google",
+          "role": "sdvs",
+          "startyear": "1254",
+          "endyear": "1256"
+        }
+      ],
+      "education": [
+        {
+          "school": "dsvsdvsd",
+          "gpa": 42
+        },
+        {
+          "school": "svdsv",
+          "gpa": 12
         }
       ],
       "id": 1
