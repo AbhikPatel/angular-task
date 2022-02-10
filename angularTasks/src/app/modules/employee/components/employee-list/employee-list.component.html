@@ -1,10 +1,14 @@
-<p>
-    <button routerLink="/employee/form"> Add user</button>
+<h2> Lists </h2>
+
+<p class="d-flex j-between">
+    <input type="search" class="searchlist" placeholder="Search for a user">
+    <button routerLink="/employee/form">+ Add new user</button>
 </p>
 
 <table>
     <thead>
         <tr>
+            <th> # </th>
             <th> First Name </th>
             <th> Last Name </th>
             <th> Phone Number </th>
@@ -17,7 +21,8 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let m of listdata">
+        <tr *ngFor="let m of listdata, let i = index">
+            <td> {{ i }} </td>
             <td> {{m.firstname}} </td>
             <td> {{m.lastname}} </td>
             <td> {{m.phone}} </td>

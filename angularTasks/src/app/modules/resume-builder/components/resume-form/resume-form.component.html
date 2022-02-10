@@ -35,8 +35,7 @@
     <fieldset>
         <legend> Skills</legend>
         <div class="outer d-flex f-direct">
-            <div class="array d-flex j-between" formArrayName='technical'
-                *ngFor="let m of this.formarr('technical').controls; let i = index;">
+            <div class="array d-flex j-between" formArrayName='technical' *ngFor="let m of this.formarr('technical').controls; let i = index;">
                 <small [formGroupName] = "i">
                     <input type="text" formControlName = "tech">
                     <button (click)="removefield(i)"> Remove </button>

@@ -108,12 +108,9 @@ export class ResumeFormComponent implements OnInit {
   }
   
   savedata(){
-
     this.ser.deleteresumedata(1).subscribe(() => {
-
       this.ser.postresumedata(this.resumeadd.value).subscribe(() => {
         alert('Data is Saved');
-        
         this.link.navigate(['/resume/resumeview'])
       })
     })

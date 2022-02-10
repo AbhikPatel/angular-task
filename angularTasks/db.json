@@ -1,17 +1,5 @@
 {
-  "employeedb": [
-    {
-      "firstname": "Abhishek",
-      "lastname": "Patel",
-      "phone": 9925607945,
-      "elemail": "abhikpatel15@gmail.com",
-      "umer": "28",
-      "gen": "Female",
-      "birth": "2022-02-17",
-      "depart": "2",
-      "id": 1
-    }
-  ],
+  "employeedb": [],
   "department": [
     {
       "id": 1,
@@ -51,9 +39,6 @@
         },
         {
           "tech": "js"
-        },
-        {
-          "tech": "scss"
         }
       ],
       "experience": [

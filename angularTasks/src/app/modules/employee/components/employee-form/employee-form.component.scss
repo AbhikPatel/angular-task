@@ -2,25 +2,25 @@
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    background-color: #212121;
+    background-color: #f7f8fa;
     padding: 70px;
 }
 
 form{
     overflow: auto;
-    border: 3px solid #ffbb00;
+    border: 1px solid #f0f2f5;
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
+    border-radius: 15px;
     flex-grow: 1;
     padding: 30px;
-    color: white;
-    background-color: #313131;
+    color: black;
+    background-color: white;
 
     h2{
-        color: #ffbb00;
+        color: #2e56e5;
         margin: 0 auto;
-        padding-bottom: 50px;
+        padding-bottom: 50px;   
     }
 
     .space{
@@ -38,9 +38,10 @@ form{
 
             input{
                 width: 300px;
-                background-color: #414141;
-                padding: 5px 0;
-                color: white;
+                padding: 5px 10px;
+                color: black;
+                border: 1px solid #e3e4e6;
+                border-radius: 10px;
 
                 &.ng-touched.ng-invalid{
                     border: 1px solid red;
@@ -59,15 +60,18 @@ form{
             justify-content: space-between;
             align-items: center;
         }
+
+        label{
+            color: gray;
+        }
     }
 
     button{
         border: none;
-        background-color: #ffbb00;
-        color: black;
-        border-radius: 3px;
-        padding: 5px 10px;
-        font-weight: 600;
+        background-color: #2e56e5;
+        color: white;
+        border-radius: 5px;
+        padding: 10px 15px;
     }
 
 }
