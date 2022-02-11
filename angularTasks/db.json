@@ -1,15 +1,15 @@
 {
   "employeedb": [
     {
-      "firstname": "Chirag",
+      "firstname": "Abhishek",
       "lastname": "Patel",
-      "phone": "6523145686",
+      "phone": "992560794",
       "elemail": "abhikpatel15@gmail.com",
-      "umer": "01",
-      "gen": "Female",
-      "birth": "2022-02-18",
-      "depart": "4",
-      "id": 2
+      "umer": "22",
+      "gen": "Male",
+      "birth": "1999-09-28",
+      "depart": "1",
+      "id": 1
     }
   ],
   "department": [

@@ -1,102 +1,79 @@
-:host{
+.main{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    background-color: #212121;
-    padding: 70px;
+    background-color: #f7f8fa;
 }
 
 form{
-    overflow: auto;
-    border: 3px solid #ffbb00;
-    display: flex;
-    flex-direction: column;
-    border-radius: 5px;
-    flex-grow: 1;
-    padding: 30px;
-    color: white;
-    background-color: #313131;
-
-    fieldset{
-        border: 1px solid #ffbb00;
-        padding: 30px 50px;
-        margin: 30px 100px;
-        border-radius: 5px;
-
-        legend{
-            color: #ffbb00;
-        }
-    }
+    width: 50%;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px 5%;
+    border: 1px solid #d8d9db;
 
     h2{
-        color: #ffbb00;
-        margin: 0 auto;
-        padding-bottom: 50px;
+        color: #2e56e5;
+        text-align: center;
     }
 
-    .space{
-        display: flex;
-        // margin: 0 100px;
-        padding: 8px 0px;
-        justify-content: space-between;
-
-        .outer{
-            width: 50%;
-            
-            p{
-                flex-direction: row;
-                width: 80%;
-            }
+    section{
+        padding: 20px 5%;
+        
+        h3{
+            // border: 1px solid red;
+            display: flex;
+            padding: 10px 0;
         }
 
-        p{
+        .space{
             display: flex;
             flex-direction: column;
-
+            padding: 20px 0;
             
-            span{
-                padding: 10px 0;
-                color: red;
+
+            label{
+
             }
 
-        }
-        div{
-            width: 40%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            p{
+
+               
+            }
         }
     }
-
-    button{
-        border: none;
-        background-color: #ffbb00;
-        color: black;
-        border-radius: 3px;
-        padding: 5px 10px;
-        font-weight: 600;
-    }
-
-}
-
-input{
-    width: 300px;
-    background-color: #414141;
-    padding: 5px 0;
-    color: white;
-
-    &.ng-touched.ng-invalid{
-        border: 1px solid red;
-    }
-
 }
 
 .array{
     margin: 10px 0;
+}
+
+input{
+    padding: 5px 10px;
+    margin: 5px 0;
     width: 100%;
+    border: 1px solid #b8b9bd;
 }
 
 span{
     color: red;
-    padding: 10px;
+}
+
+input.ng-touched.ng-invalid{
+    border: 1px solid red;
+}
+
+input[type=text]:focus{
+    background-color: #eaedfc;
+}
+
+button{
+    background-color: #2e56e5;
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+.add{
+    background-color: #ff3300;
 }

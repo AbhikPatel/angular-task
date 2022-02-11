@@ -21,7 +21,7 @@ form{
         padding: 20px 0;
 
         label{
-            color: #b8b9bd;
+            color: black;
         }
         
         p{
@@ -56,6 +56,17 @@ button{
     border-radius: 3px;
 }
 
+.sub{
+    background-color: #01a701;
+}
+
 .cancel{
     background-color: #ff3300;
+}
+
+.radio{
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+    align-items: center;
 }

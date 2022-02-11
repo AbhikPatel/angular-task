@@ -42,7 +42,7 @@
 
     <div class="space">
         <label for="gender"> Gender </label>
-        <div>
+        <div class="radio">
             <input type="radio" name="gen" id="male" value="Male" formControlName="gen">
             <label for="male"> Male </label>
             <input type="radio" name="gen" id="female" value="Female" formControlName="gen">
@@ -78,7 +78,10 @@
     </div> -->
     <div class="space j-between d-flex">
         <button routerLink="/employee/list" class="cancel" > Cancel </button>
-        <button (click)="onsubmit()" [disabled]="!useradd.valid"> {{btn}} </button>
+        <div>
+            <button (click)="onsubmit()" [disabled]="!useradd.valid"> {{btn}} </button>
+            <button type="reset"> Reset</button>
+        </div>
     </div>
 
 </form>

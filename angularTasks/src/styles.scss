@@ -31,3 +31,37 @@ html, body{
 .f-direct{
     flex-direction: column;
 }
+
+.wrapper{
+    .side{
+        label{
+            position: relative;
+            .bx{
+                color: #2e56e5;
+                font-size: 2.25rem;
+                left: 10px;
+                top: 10px;
+                position: absolute;
+                z-index: 1;
+            }
+        }
+
+        
+    }
+    #bar{
+        display: none;
+    }
+    #bar:checked ~ .side{
+       width: 56px;
+    }
+
+    #bar:checked ~ .side h1{
+        // transition: 0.1s all;
+        opacity: 0;
+    }
+
+    #bar:checked ~ .side ul li a span{
+        opacity: 0;
+        // transition: 0.4s all;
+    }
+}

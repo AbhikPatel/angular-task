@@ -1,5 +1,16 @@
-:host{
-    display: flex;
-    position: relative;
+.wrapper{
     height: 100%;
+    border: 2px solid black;
+
+    .side{
+        width: 250px;
+        transition: 0.4s all;
+        overflow: auto;
+    }
+
+    .outlet{
+        flex-grow: 1;
+        overflow: auto;
+    }
 }
+
