@@ -26,6 +26,9 @@ import { IdFilterPipe } from './pipes/id-filter.pipe';
   ],
   providers:[
    CompanyService
+  ],
+  exports:[
+    EmployeeComponent
   ]
 })
 export class EmployeeModule { }

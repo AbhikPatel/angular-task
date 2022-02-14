@@ -1,0 +1,58 @@
+{
+  "userdatabase": [
+    {
+      "fullname": "Abhishek Kishorbhai Patel",
+      "mail": "abhikpatel15@gmail.com",
+      "mobile": "0992560794",
+      "city": "Valsad",
+      "gender": "Male",
+      "department": "1",
+      "id": 1
+    },
+    {
+      "fullname": "chintu Patel",
+      "mail": "chintu@nsnvsnvn",
+      "mobile": "5615616181651",
+      "city": "valsad",
+      "gender": "Male",
+      "department": "4",
+      "id": 3
+    },
+    {
+      "fullname": "Ankit Patel",
+      "mail": "ankit@gmail",
+      "mobile": "98562515545",
+      "city": "vapi",
+      "gender": "Male",
+      "department": "1",
+      "id": 4
+    },
+    {
+      "fullname": "Abhishek Patel",
+      "mail": "abhikpatel15@gmail.com",
+      "mobile": "9925684484",
+      "city": "surat",
+      "gender": "Male",
+      "department": "2",
+      "id": 5
+    }
+  ],
+  "department": [
+    {
+      "id": 1,
+      "name": "Frontend"
+    },
+    {
+      "id": 2,
+      "name": "Backend"
+    },
+    {
+      "id": 3,
+      "name": "Mobile"
+    },
+    {
+      "id": 4,
+      "name": "Database"
+    }
+  ]
+}

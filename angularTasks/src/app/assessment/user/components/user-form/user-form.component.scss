@@ -1,0 +1,108 @@
+.container{
+    background-color: #f7f8fa;
+    padding-top: 50px;
+
+    form{
+        background-color: white;
+        padding: 20px 0;
+        width: 40%;
+        margin: 0 auto;
+        border: 1px solid #d8d9db;
+        border-radius: 5px;
+
+        h2{
+            text-align: center;
+            font-size: 2.25rem;
+        }
+        
+        .space{
+            display: flex;
+            flex-direction: column;
+            padding: 20px 8%;
+
+            input{
+                border: 1px solid #c7c9cc;
+                padding: 5px 10px;
+                border-radius: 3px;
+                width: 100%;
+            }
+            
+            span{
+                padding: 5px 0;
+                color: red;
+            }
+        }
+        .gender{
+            padding: 20px 8%;
+            width: 50%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .wrap{
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px 8%;
+            justify-content: space-between;
+            
+            .field{
+                width: 45%;
+                flex-direction: column;
+                display: flex;
+            }
+        }
+
+        .check{
+            padding: 0px 8%;
+        }
+
+        .btn{
+            padding: 20px 0;
+            text-align: center;
+
+            .button{
+                background-color: white;
+                padding: 10px;
+                margin: 0 10px;
+                border-radius: 10px;
+                font-size: 1.25rem;
+                cursor: pointer;
+            }
+        }
+        
+    }
+}
+
+select{
+    border: 1px solid #c7c9cc;
+    padding: 5px 10px;
+    border-radius: 3px;
+    width: 100%;
+}
+
+.sub{
+    color: blue;
+    border: 1px solid blue;
+}
+
+.clear{
+    color: red;
+    border: 1px solid red;
+}
+
+input{
+    border: 1px solid #c7c9cc;
+    padding: 5px 10px;
+    border-radius: 3px;
+    width: 100%;    
+}
+
+
+.check{
+    display: flex;
+    align-items: center;
+    input{
+        border: 1px solid red;
+        width: 5%;
+    }
+}

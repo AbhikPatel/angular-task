@@ -3,7 +3,7 @@
     border: 2px solid black;
 
     .side{
-        width: 250px;
+        flex: 0 0 250px;
         transition: 0.4s all;
         overflow: auto;
     }

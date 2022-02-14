@@ -1,0 +1,146 @@
+.container{
+    background-color: #f7f8fa;
+    padding: 50px 15%;
+    position: relative;
+    height: auto;
+    
+    .list-data{
+        
+        h2{
+            padding: 10px 0;
+            text-align: center;
+            border-bottom: 1px solid #d8d9db;
+        }
+
+        .top-bar{
+            justify-content: space-between;
+            padding: 20px 0;
+
+            .search-area{
+                padding-right: 20px;
+
+                .search-box{
+                    padding: 5px 10px;
+                    margin: 0 10px;
+                    border: 1px solid #c7c9cc;
+                    border-radius: 5px;
+                }
+            }
+        }
+
+        table{
+            border-collapse: collapse;
+            width: 100%;
+
+            
+        }
+            
+            tr{
+            border: 1px solid black;
+
+            th{
+                padding: 10px 0;
+            }
+
+            td{
+                background-color: #ebe6e6;
+                padding: 10px;
+                text-align: center;
+            }
+        }
+
+        .address-box{
+            border: 1px solid black;
+            padding: 20px 50px;
+            margin-top: 50px;
+
+            h3{
+                font-size: 2.25rem;
+            }
+            .address-field{
+                display: flex;
+                
+                
+                form{
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    
+                    .inner-content{
+                        width: 80%;
+                        display: flex;
+                        margin: 5px 0;
+                    
+                        .loop{
+                            display: flex;
+                            width: 100%;
+                            align-items: center;
+                            justify-content: space-between;
+                        
+                            input{
+                                border: 1px solid #c7c9cc;
+                                padding: 5px 10px;
+                                border-radius: 3px;
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .paging{
+            margin: 20px auto;
+            padding: 10px;
+            width: 20%;
+            display: flex;
+            justify-content: space-evenly;
+
+            .page{
+                border: 1px solid #d8d9db;
+                padding: 10px;
+                color: #0d6efd;
+            }
+        }
+        
+    }
+}
+
+.detail-compo{
+    position: absolute;
+    top: -1000px;
+}
+
+
+button{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+}   
+
+
+.create{
+    background-color: #0d6efd;
+    color: white;
+}
+
+.edit{
+    background-color: #6c757d;
+    color: white;
+}
+
+.del{
+    background-color: #dc3545;
+    color: white;
+}
+
+.details{
+    background-color: #0dcaf0;
+    color: black;
+}
+
+span{
+    color: red;
+}

@@ -6,7 +6,8 @@ const routes: Routes = [
   { path: 'employee', 
     loadChildren: () => import('./modules/employee/employee.module').then(m => m.EmployeeModule) }, 
   { path: 'resume', 
-    loadChildren: () => import('./modules/resume-builder/resume-builder.module').then(m => m.ResumeBuilderModule) }];
+    loadChildren: () => import('./modules/resume-builder/resume-builder.module').then(m => m.ResumeBuilderModule) },
+  { path: 'user', loadChildren: () => import('./assessment/user/user.module').then(m => m.UserModule) }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

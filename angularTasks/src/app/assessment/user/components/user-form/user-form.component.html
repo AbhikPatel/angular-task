@@ -1,0 +1,74 @@
+<div class="container">
+    <!-- Start: Add user form  -->
+    <form [formGroup]="userformgroup">
+        <!-- (ngSubmit)="onsubmit()" -->
+        <h2> Add User </h2>
+        <!-- Name field  -->
+        <div class="space">
+            <label for="fullname"> Name </label>
+            <input type="text" name="fullname" id="fullname" formControlName="fullname">
+            <span *ngIf="validatorfunc['fullname'].touched && validatorfunc['fullname'].invalid"> This feild is Invalid </span>
+        </div>
+
+        <!-- Email field  -->
+        <div class="space">
+            <label for="mail"> Email</label>
+            <input type="text" name="mail" id="mail" formControlName='mail'>
+            <span *ngIf="validatorfunc['mail'].touched && validatorfunc['mail'].invalid"> This feild is Invalid </span>
+        </div>
+
+        <!-- Mobile field  -->
+        <div class="space">
+            <label for="mobile"> Mobile</label>
+            <input type="text" name="mobile" id="mobile" formControlName='mobile'>
+            <span *ngIf="validatorfunc['mobile'].touched && validatorfunc['mobile'].invalid"> This feild is Invalid
+            </span>
+        </div>
+
+        <!-- City Field  -->
+        <div class="space">
+            <label for="city"> City</label>
+            <input type="text" name="city" id="city" formControlName='city'>
+            <span *ngIf="validatorfunc['city'].touched && validatorfunc['city'].invalid"> This feild is Invalid </span>
+        </div>
+
+        <!-- Gender field  -->
+        <div class="gender">
+            <input type="radio" name="gender" id="male" value="Male" formControlName='gender'>
+            <label for="male"> Male </label>
+            <input type="radio" name="gender" id="female" value="Female" formControlName='gender'>
+            <label for="female"> Female </label>
+            <input type="radio" name="gender" id="other" value="Other" formControlName='gender'>
+            <label for="other"> Other </label>
+        </div>
+
+        <!-- Department Field  -->
+        <div class="wrap">
+            <div class="field">
+                <label for="department"> Department </label>
+                <div>
+                    <select id="department" name="department" formControlName="department">
+                        <option *ngFor="let part of department" [value]="part.id">
+                            {{ part.name }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="field">
+                <label for="date"> Date </label>
+                <input type="date" name="date" id="date">
+            </div>
+        </div>
+
+        <div class="check">
+            <input class="check" type="checkbox" id="employee">
+            <label for="employee"> Permanent Employee</label>
+        </div>
+
+        <div class="btn">
+            <button class="button sub"  (click)="onsubmit()"> {{ btn }} </button>
+            <button class="button clear" type="reset" > Clear </button>
+        </div>
+    </form>
+    <!-- End: Add user form  -->
+</div>
