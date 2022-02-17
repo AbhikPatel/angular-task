@@ -1,11 +1,23 @@
 .wrapper{
     height: 100%;
     border: 2px solid black;
+    position: relative;
 
+    label{
+        cursor: pointer;
+        position: absolute;
+        z-index: 999;
+        color: #2e56e5;
+        font-size: 2rem;
+        background-color: black;
+        // left: -100px;
+    }
     .side{
         flex: 0 0 250px;
         transition: 0.4s all;
         overflow: auto;
+        border: 1px solid #d8d9db;
+        
     }
 
     .outlet{

@@ -1,0 +1,33 @@
+.container{
+    background-color: #f7f8fa;
+    height: auto;
+    padding: 50px 0;
+
+    .card{
+
+        .content{
+            padding: 20px 0;
+            
+            button{
+                padding: 5px 10px;
+                background-color: #2e56e5;
+                color: white;
+                border: none;
+                border-radius: 5px;
+            }
+
+            input{
+                padding: 5px 10px;
+                border: 1px solid #d8d9db;
+            }
+        }
+
+    }
+}
+
+.box{
+    background-color: white;
+    border: 3px solid red;
+    width: 50%;
+    margin: 0 auto;
+}

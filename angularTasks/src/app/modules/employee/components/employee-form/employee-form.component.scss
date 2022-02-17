@@ -1,7 +1,5 @@
-:host{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+.container{
+    height: 100%;
     background-color: #f7f8fa;
     overflow: auto;
 }
@@ -56,8 +54,8 @@ button{
     border-radius: 3px;
 }
 
-.sub{
-    background-color: #01a701;
+.save{
+    width: 20%;
 }
 
 .cancel{

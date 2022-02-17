@@ -2,7 +2,7 @@
     background-color: #f7f8fa;
     padding: 50px 15%;
     position: relative;
-    height: auto;
+    height: 100%;
     
     .list-data{
         
@@ -30,13 +30,11 @@
 
         table{
             border-collapse: collapse;
-            width: 100%;
-
-            
+            width: 100%;            
         }
             
             tr{
-            border: 1px solid black;
+                border: 1px solid black;
 
             th{
                 padding: 10px 0;

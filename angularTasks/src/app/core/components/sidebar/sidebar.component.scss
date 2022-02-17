@@ -1,59 +1,49 @@
-
+aside{
+    height: 100%;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    
     h1{
         color: #2e56e5;
-        font-size: 1.25rem;
-        display: flex;
-        height: 60px;
-        align-items: center;
-        padding: 0px 10px;
-        border-bottom: 1px solid #f0f2f5;
-        justify-content: right;
-        overflow: hidden;
-        transition: 0.2s all;
+        text-align: right;
+        padding: 10px;
     }
-
-    ul{
-        padding: 50px 0;
-        list-style: none;
-        text-align: left;
-        border-bottom: 1px solid #f0f2f5;
     
-        li{
-            display: flex;
-        
-            a{
-                border-radius: 10px;
-                text-decoration: none;
-                color: black;
+    nav{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+
+        ul{
+            list-style: none;
+            
+            li{
                 display: flex;
-                align-items: center;
-                flex-grow: 1;
-                margin: 10px;
-                overflow: hidden;
-                height: 40px;
+                a{
+                    // border: 3px solid red;
+                    border-radius: 10px;
+                    color: black;
+                    text-decoration: none;
+                    flex-grow: 1;
+                    padding: 8px;
+                    margin: 5px 8px;
 
-                .bx{
-                    padding: 0 10px;
-                    transform: scale(1.2,1.2);
-                }
+                    i{
+                        padding: 0 10px;
+                    }
 
-                &.active{
-                    background-color: #eaedfc;
-                    color: #2e56e5;
+                    span{
+
+                    }
+
+                    &:hover{
+                        color: #2e56e5;
+                        background-color: #839aec;
+                    }
                 }
-            }  
+            }
         }
     }
-
-
-
-label{
-    // border: 1px solid red;
-    color: #2e56e5;
-    text-align: left;
-    font-size: 2.5rem;
-    position: absolute;
-    left: 20px;
 }
-
-

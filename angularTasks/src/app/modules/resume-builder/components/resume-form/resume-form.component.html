@@ -36,12 +36,12 @@
 
         <section>
             <h3>Technical Skills</h3>
-            <p class="d-flex j-between a-items">
+            <p class="d-flex justify-content-between a-items">
                 <b>Skills</b>
                 <button  class="add" (click)="addfield()"> Add </button>
             </p>
-            <div class="outer d-flex f-direct">
-                <div class="array d-flex j-between" formArrayName='technical'
+            <div class="outer d-flex flex-column">
+                <div class="array d-flex justify-content-between" formArrayName='technical'
                     *ngFor="let m of this.formarr('technical').controls; let i = index;">
                     <small [formGroupName]="i" style="width: 100%;">
                         <input type="text" formControlName="tech">
@@ -55,15 +55,15 @@
 
 
         <section>
-            <div class="d-flex a-items j-between">
+            <div class="d-flex a-items justify-content-between">
                 <h3>Experience</h3>
                 <p>
                     <button (click)="addexgroup()" class="add"> Add </button>
                 </p>
             </div>
             <b>Experience :-</b>
-            <div class="outer d-flex f-direct">
-                <div class="array d-flex f-direct" formArrayName='experience'
+            <div class="outer d-flex flex-column">
+                <div class="array d-flex flex-column" formArrayName='experience'
                     *ngFor="let ex of this.formarr('experience').controls; let i = index">
                     <div [formGroupName]="i">
                         <div class="space">
@@ -108,14 +108,14 @@
             </div>
         </section>
         <section>
-            <div class="d-flex j-between a-items">
+            <div class="d-flex justify-content-between a-items">
                 <h3>Education</h3>
                 <p>
                     <button (click)="addedu()" class="add"> Add </button>
                 </p>
             </div>
-            <div class="outer d-flex f-direct">
-                <div class="array d-flex f-direct" formArrayName='education'
+            <div class="outer d-flex flex-column">
+                <div class="array d-flex flex-column" formArrayName='education'
                     *ngFor="let ex of this.formarr('education').controls; let i = index">
                     <div [formGroupName]="i">
                         <div class="space">

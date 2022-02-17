@@ -1,87 +1,90 @@
-<form [formGroup]="useradd" class="d-flex f-direct">
-    <h2 class="d-flex j-center"> Registration Form </h2>
-    <div class="space">
-        <label for="fname"> First Name </label>
-        <p>
-            <input type="text" name="fname" id="fname" formControlName="firstname">
-            <span *ngIf="firstname && firstname.invalid && firstname.touched"> This Field is Invalid.</span>
-        </p>
-    </div>
+<div class="container">
 
-    <div class="space">
-        <label for="lname"> Last Name </label>
-        <p>
-            <input type="text" name="lname" id="lname" formControlName="lastname">
-            <span *ngIf="lastname && lastname.invalid && lastname.touched"> This Field is Invalid.</span>
-        </p>
-    </div>
-
-    <div class="space">
-        <label for="phone"> Phone Number </label>
-        <p>
-            <input type="tel" name="phone" id="phone" formControlName="phone">
-            <span *ngIf="phone && phone.invalid && phone.touched"> This Field is Invalid.</span>
-        </p>
-    </div>
-
-    <div class="space">
-        <label for="mail"> Email </label>
-        <p>
-            <input type="text" name="mail" id="mail" formControlName="elemail">
-            <span *ngIf="elemail && elemail.invalid && elemail.touched"> This Field is Invalid.</span>
-        </p>
-    </div>
-
-    <div class="space">
-        <label for="age"> Age </label>
-        <p>
-            <input type="text" name="age" id="age" formControlName="umer">
-            <span *ngIf="umer && umer.invalid && umer.touched"> This Field is Invalid.</span>
-        </p>
-    </div>
-
-    <div class="space">
-        <label for="gender"> Gender </label>
-        <div class="radio">
-            <input type="radio" name="gen" id="male" value="Male" formControlName="gen">
-            <label for="male"> Male </label>
-            <input type="radio" name="gen" id="female" value="Female" formControlName="gen">
-            <label for="female"> Female </label>
+    <form [formGroup]="useradd">
+        <h2 class="d-flex j-center"> Registration Form </h2>
+        <div class="space">
+            <label for="fname"> First Name </label>
+            <p>
+                <input type="text" name="fname" id="fname" formControlName="firstname">
+                <span *ngIf="firstname && firstname.invalid && firstname.touched"> This Field is Invalid.</span>
+            </p>
         </div>
-        <span *ngIf="gen && gen.invalid && gen.touched"> This Field is Invalid.</span>
-    </div>
-    <div class="space">
-        <label for="dob"> Date of Birth </label>
-        <p>
-            <input type="date" name="dob" id="dob" formControlName="birth">
-            <span *ngIf="birth && birth.invalid && birth.touched"> This Field is Invalid.</span>
-        </p>
-    </div>
 
-    <div class="space">
-        <label for="department"> Department </label>
-        <div>
-            <select id="department" name="department" formControlName="depart">
-                <option *ngFor="let d of department" [value]="d.id">
-                    {{ d.name }}
-                </option>
-            </select>
-            <span *ngIf="depart && depart.invalid && depart.touched"> This Field is Invalid.</span>
+        <div class="space">
+            <label for="lname"> Last Name </label>
+            <p>
+                <input type="text" name="lname" id="lname" formControlName="lastname">
+                <span *ngIf="lastname && lastname.invalid && lastname.touched"> This Field is Invalid.</span>
+            </p>
         </div>
-    </div>
 
-    <!-- <div class="space">
+        <div class="space">
+            <label for="phone"> Phone Number </label>
+            <p>
+                <input type="tel" name="phone" id="phone" formControlName="phone">
+                <span *ngIf="phone && phone.invalid && phone.touched"> This Field is Invalid.</span>
+            </p>
+        </div>
+
+        <div class="space">
+            <label for="mail"> Email </label>
+            <p>
+                <input type="text" name="mail" id="mail" formControlName="elemail">
+                <span *ngIf="elemail && elemail.invalid && elemail.touched"> This Field is Invalid.</span>
+            </p>
+        </div>
+
+        <div class="space">
+            <label for="age"> Age </label>
+            <p>
+                <input type="text" name="age" id="age" formControlName="umer">
+                <span *ngIf="umer && umer.invalid && umer.touched"> This Field is Invalid.</span>
+            </p>
+        </div>
+
+        <div class="space">
+            <label for="gender"> Gender </label>
+            <div class="radio">
+                <input type="radio" name="gen" id="male" value="Male" formControlName="gen">
+                <label for="male"> Male </label>
+                <input type="radio" name="gen" id="female" value="Female" formControlName="gen">
+                <label for="female"> Female </label>
+            </div>
+            <span *ngIf="gen && gen.invalid && gen.touched"> This Field is Invalid.</span>
+        </div>
+        <div class="space">
+            <label for="dob"> Date of Birth </label>
+            <p>
+                <input type="date" name="dob" id="dob" formControlName="birth">
+                <span *ngIf="birth && birth.invalid && birth.touched"> This Field is Invalid.</span>
+            </p>
+        </div>
+
+        <div class="space">
+            <label for="department"> Department </label>
+            <div>
+                <select id="department" name="department" formControlName="depart">
+                    <option *ngFor="let d of department" [value]="d.id">
+                        {{ d.name }}
+                    </option>
+                </select>
+                <span *ngIf="depart && depart.invalid && depart.touched"> This Field is Invalid.</span>
+            </div>
+        </div>
+
+        <!-- <div class="space">
         <label for="skills"> Skills  </label>
         <p formArrayName = "skillarr" *ngFor="let m of useradd.get('skillarr').controls; let i = index">
             <input type="text" name="skills" id="skills" formControlName = "skill">
         </p>
     </div> -->
-    <div class="space j-between d-flex">
-        <button routerLink="/employee/list" class="cancel" > Cancel </button>
-        <div>
-            <button (click)="onsubmit()" [disabled]="!useradd.valid"> {{btn}} </button>
-            <button type="reset"> Reset</button>
+        <div class="space justify-content-between d-flex">
+            <button routerLink="/employee/list" class="cancel"> Cancel </button>
+            <div class="save justify-content-between d-flex">
+                <button (click)="onsubmit()" [disabled]="!useradd.valid"> {{btn}} </button>
+                <button type="reset"> Reset</button>
+            </div>
         </div>
-    </div>
 
-</form>
+    </form>
+</div>

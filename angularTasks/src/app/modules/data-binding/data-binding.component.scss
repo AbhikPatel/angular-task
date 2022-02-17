@@ -1,0 +1,40 @@
+nav{
+    flex: 0 0 61px;
+    background-color: white;
+    padding: 0 80px;
+    border-bottom: 1px solid #d8d9db;
+    
+    h2{
+        color: #2e56e5;
+    }
+    
+    ul{
+        list-style: none;
+        
+        li{
+
+            a{
+                text-decoration: none;
+                margin: 0 20px;
+                color: black;
+                padding: 3px 10px;
+                border-radius: 3px;
+                
+                &.active{
+                    background-color: #eaedfc;
+                    color: #2e56e5;
+                    border: 1px solid #2e56e5;
+                }
+            }
+            
+        }
+    }
+}
+
+.outlet{
+    overflow: auto;
+}
+
+.container{
+    height: 100%;
+}

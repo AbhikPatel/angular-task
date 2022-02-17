@@ -3,12 +3,12 @@
     {
       "firstname": "Abhishek",
       "lastname": "Patel",
-      "phone": "992560794",
+      "phone": "9925607945",
       "elemail": "abhikpatel15@gmail.com",
-      "umer": "22",
-      "gen": "Male",
-      "birth": "1999-09-28",
-      "depart": "1",
+      "umer": "28",
+      "gen": "Female",
+      "birth": "2022-02-17",
+      "depart": "2",
       "id": 1
     }
   ],
@@ -33,16 +33,10 @@
   "resumedata": [
     {
       "firstname": "Abhishek Kishorbhai Patel",
-      "position": "no idea",
+      "position": "Frontend Developer",
       "elemail": "abhikpatel15@gmail.com",
       "phone": "09925607945",
       "technical": [
-        {
-          "tech": "chess"
-        },
-        {
-          "tech": "cube"
-        },
         {
           "tech": "html"
         },
@@ -51,40 +45,26 @@
         },
         {
           "tech": "js"
+        },
+        {
+          "tech": "chess"
+        },
+        {
+          "tech": "cube"
         }
       ],
       "experience": [
         {
-          "company": "1rivet",
-          "role": "frontend",
-          "startyear": "2021",
-          "endyear": "2025"
-        },
-        {
-          "company": "tcs",
-          "role": "backend",
-          "startyear": "2026",
-          "endyear": "2030"
-        },
-        {
-          "company": "google",
-          "role": "ceo",
-          "startyear": "2030",
-          "endyear": "2040"
+          "company": "fgfdgdgd",
+          "role": "asdaddasd",
+          "startyear": "5412",
+          "endyear": "4785"
         }
       ],
       "education": [
         {
-          "school": "convent",
-          "gpa": 9
-        },
-        {
-          "school": "jay ambe internation school",
-          "gpa": 9
-        },
-        {
           "school": "utu",
-          "gpa": 10
+          "gpa": 9
         }
       ],
       "id": 1

@@ -7,7 +7,8 @@ const routes: Routes = [
     loadChildren: () => import('./modules/employee/employee.module').then(m => m.EmployeeModule) }, 
   { path: 'resume', 
     loadChildren: () => import('./modules/resume-builder/resume-builder.module').then(m => m.ResumeBuilderModule) },
-  { path: 'user', loadChildren: () => import('./assessment/user/user.module').then(m => m.UserModule) }];
+  { path: 'user', loadChildren: () => import('./assessment/user/user.module').then(m => m.UserModule) },
+  { path: 'databind', loadChildren: () => import('./modules/data-binding/data-binding.module').then(m => m.DataBindingModule) }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

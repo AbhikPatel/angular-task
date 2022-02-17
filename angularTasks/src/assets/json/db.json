@@ -1,15 +1,6 @@
 {
   "userdatabase": [
     {
-      "fullname": "Abhishek Kishorbhai Patel",
-      "mail": "abhikpatel15@gmail.com",
-      "mobile": "0992560794",
-      "city": "Valsad",
-      "gender": "Male",
-      "department": "1",
-      "id": 1
-    },
-    {
       "fullname": "chintu Patel",
       "mail": "chintu@nsnvsnvn",
       "mobile": "5615616181651",
@@ -26,15 +17,6 @@
       "gender": "Male",
       "department": "1",
       "id": 4
-    },
-    {
-      "fullname": "Abhishek Patel",
-      "mail": "abhikpatel15@gmail.com",
-      "mobile": "9925684484",
-      "city": "surat",
-      "gender": "Male",
-      "department": "2",
-      "id": 5
     }
   ],
   "department": [
