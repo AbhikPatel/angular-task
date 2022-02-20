@@ -13,9 +13,11 @@ aside{
     }
     
     nav{
-        padding-top: 100px;
+        padding-top: 50px;
 
         ul{
+            border-top: 1px solid #d8d9db;
+            border-bottom: 1px solid #d8d9db;
             list-style: none;
             li{
                 a{
@@ -42,9 +44,17 @@ aside{
                     &.active{
                         color: #2e56e5;
                         background-color: #eaedfc;
+
+                        .bx{
+                            color: #2e56e5;
+                        }
                     }
                 }
             }
         }
     }
+}
+
+.menu{
+    padding: 50px 0;
 }
