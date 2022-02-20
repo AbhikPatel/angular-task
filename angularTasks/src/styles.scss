@@ -43,9 +43,59 @@ html, body{
     flex-grow: 1;
 }
 
-
 #bar{
     display: none;
 }
+
+#bar:checked ~ .side{
+    flex: 0 0 54px;
+}
+
+#bar:checked ~ .side aside nav li a span{
+    transform: translateX(100px);
+}
+#bar:checked ~ .side aside h1{
+    transform: translateX(100px);
+}
+
+.card{
+    border: 1px solid #d8d9db;
+    width: 80%;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px 50px;
+    border-radius: 5px;
+    border-bottom: 3px solid $primary-color;
+}
 // Media Queries 
+
+@media screen and (max-width:768px){
+
+    .side{
+        position: absolute;
+        border: 3px solid red;
+        left: -250px;
+        background-color: white;
+        width: 250px;
+        height: 100%;
+        z-index: 99;
+    }
+
+    #bar:checked ~ .side{
+        left: 0;
+    }
+
+    #bar:checked ~ .side aside nav li a span{
+        transform: translateX(0);
+    }
+
+    #bar:checked ~ .side aside h1{
+        transform: translateX(0);
+    }
+
+    #bar:checked ~ .outlet{
+        // background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+        filter: blur(6px);
+    }
+}
 

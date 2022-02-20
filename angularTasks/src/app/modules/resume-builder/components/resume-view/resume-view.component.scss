@@ -1,13 +1,11 @@
-:host{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+.container{
     overflow: auto;
-    background-color: #f7f8fa;
+    padding: 50px 0;
+    height: auto;
 }
 
 section{    
-    width: 800px;
+    width: 60%;
     background-color: #f5f5f5;
     border-top: 3px solid black;
     border-bottom: 3px solid black;
@@ -25,4 +23,10 @@ table {
     border-bottom: 1px solid #dddddd;
     padding: 10px 0;
     text-align: left;
+}
+
+@media screen and (max-width:768px){
+    section{
+        width: 80%;
+    }
 }

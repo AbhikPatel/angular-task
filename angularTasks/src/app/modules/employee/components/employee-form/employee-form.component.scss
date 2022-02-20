@@ -68,3 +68,35 @@ button{
     width: 25%;
     align-items: center;
 }
+
+@media screen and (max-width:768px){
+    form{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:480px){
+
+    .container{
+        padding-top: 30px;
+    }
+
+    form{
+        width: 80%;
+
+        .space{
+            label{
+                font-size: 0.8rem;
+            }
+            p{
+                input{
+                    font-size: 0.8rem;
+                }
+                span{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+
+}

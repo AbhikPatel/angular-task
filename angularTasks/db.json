@@ -6,10 +6,76 @@
       "phone": "9925607945",
       "elemail": "abhikpatel15@gmail.com",
       "umer": "28",
-      "gen": "Female",
-      "birth": "2022-02-17",
-      "depart": "2",
+      "gen": "Male",
+      "birth": "2022-02-23",
+      "depart": "1",
       "id": 1
+    },
+    {
+      "firstname": "Chirag",
+      "lastname": "Patel",
+      "phone": "9925607945",
+      "elemail": "abhikpatel15@gmail.com",
+      "umer": "28",
+      "gen": "Male",
+      "birth": "2022-02-23",
+      "depart": "1",
+      "id": 1
+    },
+    {
+      "firstname": "Jay",
+      "lastname": "Patel",
+      "phone": "9925607945",
+      "elemail": "abhikpatel15@gmail.com",
+      "umer": "28",
+      "gen": "Male",
+      "birth": "2022-02-23",
+      "depart": "1",
+      "id": 1
+    },
+    {
+      "firstname": "Sushil",
+      "lastname": "Patel",
+      "phone": "9925607945",
+      "elemail": "abhikpatel15@gmail.com",
+      "umer": "28",
+      "gen": "Male",
+      "birth": "2022-02-23",
+      "depart": "1",
+      "id": 1
+    },
+    {
+      "firstname": "Abhishek",
+      "lastname": "Patel",
+      "phone": "9925607945",
+      "elemail": "abhikpatel15@gmail.com",
+      "umer": "28",
+      "gen": "Male",
+      "birth": "2022-02-23",
+      "depart": "1",
+      "id": 1
+    },
+    {
+      "firstname": "Abhishek",
+      "lastname": "Patel",
+      "phone": "9925607945",
+      "elemail": "abhikpatel15@gmail.com",
+      "umer": "28",
+      "gen": "Male",
+      "birth": "2022-02-23",
+      "depart": "1",
+      "id": 1
+    },
+    {
+      "firstname": "Chintan",
+      "lastname": "Patel",
+      "phone": "995864225",
+      "elemail": "chintu@gamil.com",
+      "umer": "52",
+      "gen": "Male",
+      "birth": "2022-03-03",
+      "depart": "3",
+      "id": 2
     }
   ],
   "department": [
@@ -32,39 +98,53 @@
   ],
   "resumedata": [
     {
-      "firstname": "Abhishek Kishorbhai Patel",
-      "position": "Frontend Developer",
+      "firstname": "Abhishek Patel",
+      "position": "Frontend",
       "elemail": "abhikpatel15@gmail.com",
-      "phone": "09925607945",
+      "phone": "9925607945",
       "technical": [
         {
-          "tech": "html"
+          "tech": "HTML"
         },
         {
-          "tech": "css"
+          "tech": "CSS"
         },
         {
-          "tech": "js"
+          "tech": "JS"
         },
         {
-          "tech": "chess"
+          "tech": "Angular"
         },
         {
-          "tech": "cube"
+          "tech": "SCSS"
         }
       ],
       "experience": [
         {
-          "company": "fgfdgdgd",
-          "role": "asdaddasd",
-          "startyear": "5412",
-          "endyear": "4785"
+          "company": "1Rivet",
+          "role": "Frontend Developer",
+          "startyear": "2015",
+          "endyear": "2020"
+        },
+        {
+          "company": "Google",
+          "role": "CEO",
+          "startyear": "2020",
+          "endyear": "2026"
         }
       ],
       "education": [
         {
-          "school": "utu",
+          "school": "Convent",
           "gpa": 9
+        },
+        {
+          "school": "Jay Ambe Vidhiya Bhavan",
+          "gpa": 8
+        },
+        {
+          "school": "Uka Tarsadi University",
+          "gpa": 6
         }
       ],
       "id": 1

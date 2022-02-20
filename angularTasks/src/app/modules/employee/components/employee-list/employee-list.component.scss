@@ -63,3 +63,39 @@ td{
     padding: 10px;
     font-size: 0.9rem;
 }
+
+@media screen and (max-width:768px){
+
+    .container{
+        padding-top: 50px;
+    }
+
+
+    .searchlist{
+        width: 25%;
+    }
+}
+
+@media screen and (max-width:480px){
+
+    table{
+        width: 90%;
+        overflow: auto;
+    }
+
+    th{
+        font-size: 0.6rem;
+    }
+
+    td{
+        font-size: 0.6rem;
+    }
+
+    button{
+        font-size: 0.6rem;
+    }
+
+    .searchlist{
+        width: 40%;
+    }
+}

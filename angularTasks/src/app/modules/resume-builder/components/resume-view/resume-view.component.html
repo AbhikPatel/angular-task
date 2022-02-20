@@ -1,116 +1,119 @@
-<section>
-    <!-- Header Section  -->
-    <table>
-        <tr>
-            <th style="text-align: left; width: 600px; vertical-align: top;" >
-                <h1 style="margin: 0;"> {{tableadd.firstname}} </h1>
-                <h3 style="font-style: italic;"> {{ tableadd.position}}</h3>
-            </th>
-            <th style="text-align: left; vertical-align: top;">
-                <button> Download PDF</button>
-                <p style="color: red;">{{ tableadd.elemail }}</p>
-                <p style="margin: 0;"> {{tableadd.phone}} </p>
-            </th>
-        </tr>
-    </table>
+<div class="container">
+    <section>
+        <!-- Header Section  -->
+        <table>
+            <tr>
+                <th style="text-align: left; width: 600px; vertical-align: top;">
+                    <h1 style="margin: 0;"> {{tableadd.firstname}} </h1>
+                    <h3 style="font-style: italic;"> {{ tableadd.position}}</h3>
+                </th>
+                <th style="text-align: left; vertical-align: top;">
+                    <button> Download PDF</button>
+                    <p style="color: red;">{{ tableadd.elemail }}</p>
+                    <p style="margin: 0;"> {{tableadd.phone}} </p>
+                </th>
+            </tr>
+        </table>
 
-    <!-- Profile Section  -->
-    <table>
-        <tr>
-            <td style="width: 180px; vertical-align: top; font-style: italic;"> Profile </td>
-            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam corrupti, tenetur ratione neque
-                aliquam voluptatem dicta quasi nostrum iusto ipsum maxime, reprehenderit tempora ex repellat odio
-                adipisci earum non aspernatur!</td>
-        </tr>
-    </table>
+        <!-- Profile Section  -->
+        <table>
+            <tr>
+                <td style="width: 180px; vertical-align: top; font-style: italic;"> Profile </td>
+                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam corrupti, tenetur ratione neque
+                    aliquam voluptatem dicta quasi nostrum iusto ipsum maxime, reprehenderit tempora ex repellat odio
+                    adipisci earum non aspernatur!</td>
+            </tr>
+        </table>
 
-    <!-- Skills Section  -->
-    <table>
-        <tr>
-            <td style="width: 180px; font-style: italic;">Skills</td>
-            <td>
-                <h3> Wed Design</h3>
-            </td>
-            <td>
-                <h3>Interface Design</h3>
-            </td>
-            <td>
-                <h3>Project Direction</h3>
-            </td>
-        </tr>
+        <!-- Skills Section  -->
+        <table>
+            <tr>
+                <td style="width: 180px; font-style: italic;">Skills</td>
+                <td>
+                    <h3> Wed Design</h3>
+                </td>
+                <td>
+                    <h3>Interface Design</h3>
+                </td>
+                <td>
+                    <h3>Project Direction</h3>
+                </td>
+            </tr>
 
-        <tr>
-            <td></td>
-            <td style="padding-right:15px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, non.
-            </td>
-            <td style="padding-right:15px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam,
-                quas?</td>
-            <td style="padding-right:15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, quo!
-            </td>
-        </tr>
-    </table>
+            <tr>
+                <td></td>
+                <td style="padding-right:15px;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, non.
+                </td>
+                <td style="padding-right:15px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam,
+                    quas?</td>
+                <td style="padding-right:15px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, quo!
+                </td>
+            </tr>
+        </table>
 
-    <!-- Technical Section   -->
-    <table>
-        <tr>
-            <td style="width: 180px; vertical-align: top; font-style: italic;"> Technical</td>
-            <td>
-                <div style="border-bottom: none; padding: 0; border-collapse: collapse; display: flex; flex-wrap: wrap;">
-                    <div style="width: 33%;"  *ngFor="let m of tableadd.technical">
-                        <p>{{m.tech}}</p>
+        <!-- Technical Section   -->
+        <table>
+            <tr>
+                <td style="width: 180px; vertical-align: top; font-style: italic;"> Technical</td>
+                <td>
+                    <div
+                        style="border-bottom: none; padding: 0; border-collapse: collapse; display: flex; flex-wrap: wrap;">
+                        <div style="width: 33%;" *ngFor="let m of tableadd.technical">
+                            <p>{{m.tech}}</p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <!-- style="border-bottom: 1px solid #dddddd;" -->
+
+        <!-- Experience Section  -->
+        <table>
+            <tr *ngFor="let m of tableadd.experience">
+                <td style="width: 180px; vertical-align: top; font-style: italic;">Experience</td>
+                <td>
+                    <table style="padding: 0;">
+                        <tr>
+                            <td style="width: 450px;">
+                                <h3>{{m.company}}</h3>
+                            </td>
+                            <td>{{m.startyear}} - {{m.endyear}}</td>
+                        </tr>
+                        <tr>
+                            <td><b>{{m.role}}</b></td>
+                        </tr>
+                        <tr>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem tempora amet
+                                excepturi nobis nostrum tempore corporis, ea a suscipit nam!</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Education Section  -->
+        <table>
+            <tr style="display: flex;">
+                <td style="width: 180px; vertical-align: top; font-style: italic; display: flex;">Education</td>
+                <div style=" display: flex; flex-direction: column; width: 100%;">
+                    <div *ngFor="let m of tableadd.education" style="border-bottom: 1px solid #dddddd; margin: 10px 0;">
+                        <h3>{{m.school}}</h3>
+                        <p>Dual Major - <b>{{m.gpa}}</b></p>
                     </div>
                 </div>
-            </td>
-        </tr>
-    </table>
-    <!-- style="border-bottom: 1px solid #dddddd;" -->
 
-    <!-- Experience Section  -->
-    <table>
-        <tr *ngFor="let m of tableadd.experience">
-            <td style="width: 180px; vertical-align: top; font-style: italic;">Experience</td>
-            <td>
-                <table style="padding: 0;">
-                    <tr>
-                        <td style="width: 450px;">
-                            <h3>{{m.company}}</h3>
-                        </td>
-                        <td>{{m.startyear}} - {{m.endyear}}</td>
-                    </tr>
-                    <tr>
-                        <td><b>{{m.role}}</b></td>
-                    </tr>
-                    <tr>
-                        <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem tempora amet
-                            excepturi nobis nostrum tempore corporis, ea a suscipit nam!</td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+            </tr>
+        </table>
+        <table style="display: flex; justify-content: center;">
+            <tr>
+                <td style="padding: 0 10px;"> {{tableadd.firstname}}</td>
+                <td style="padding: 0 10px; color: red;"> {{tableadd.elemail}}</td>
+                <td style="padding: 0 10px;"> {{tableadd.phone}}</td>
+            </tr>
+        </table>
+    </section>
 
-    <!-- Education Section  -->
-    <table>
-        <tr style="display: flex;">
-            <td style="width: 180px; vertical-align: top; font-style: italic; display: flex;">Education</td>
-            <div style=" display: flex; flex-direction: column; width: 100%;">
-                <div *ngFor="let m of tableadd.education" style="border-bottom: 1px solid #dddddd; margin: 10px 0;">
-                    <h3>{{m.school}}</h3>
-                    <p>Dual Major - <b>{{m.gpa}}</b></p>
-                </div>
-            </div>
-
-        </tr>
-    </table>
-    <table style="display: flex; justify-content: center;">
-        <tr>
-            <td style="padding: 0 10px;"> {{tableadd.firstname}}</td>
-            <td style="padding: 0 10px; color: red;"> {{tableadd.elemail}}</td>
-            <td style="padding: 0 10px;"> {{tableadd.phone}}</td>
-        </tr>
-    </table>
-</section>
-
-<p>
-    <button routerLink="/resume/resumeform"> Back to form</button>
-</p>
+    <p>
+        <button routerLink="/resume/resumeform"> Back to form</button>
+    </p>
+</div>

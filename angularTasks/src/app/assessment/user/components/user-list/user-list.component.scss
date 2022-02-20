@@ -1,11 +1,15 @@
 .container{
     background-color: #f7f8fa;
-    padding: 50px 15%;
     position: relative;
-    height: 100%;
+    padding: 50px 0;
+    height: auto;
     
     .list-data{
         
+        // border: 3px solid red;
+        width: 70%;
+        margin: 0 auto;
+
         h2{
             padding: 10px 0;
             text-align: center;
@@ -141,4 +145,25 @@ button{
 
 span{
     color: red;
+}
+
+@media screen and (max-width:768px){
+
+    .container{
+
+        .list-data{
+            width: 90%;
+
+            .top-bar{
+                .search-area{
+                    .search-box{
+                        width: 130px;
+                    }
+                }
+            }
+        }
+    }
+
+    
+    
 }

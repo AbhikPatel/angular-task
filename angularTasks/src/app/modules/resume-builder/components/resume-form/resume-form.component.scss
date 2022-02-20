@@ -77,3 +77,9 @@ button{
 .add{
     background-color: #ff3300;
 }
+
+@media screen and (max-width:768px){
+    form{
+        width: 70%;
+    }
+}

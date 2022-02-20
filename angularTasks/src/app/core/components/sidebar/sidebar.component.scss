@@ -1,46 +1,47 @@
 aside{
     height: 100%;
-    padding-top: 50px;
-    display: flex;
-    flex-direction: column;
-    
+    position: relative;
+
     h1{
         color: #2e56e5;
-        text-align: right;
-        padding: 10px;
+        top: 10px;
+        left: 70px;
+        white-space: nowrap;
+        position: absolute;
+        transition: 0.6s all;
+        transform: translateX(0px);
     }
     
     nav{
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        justify-content: space-between;
+        padding-top: 100px;
 
         ul{
             list-style: none;
-            
             li{
-                display: flex;
                 a{
-                    // border: 3px solid red;
                     border-radius: 10px;
                     color: black;
                     text-decoration: none;
-                    flex-grow: 1;
-                    padding: 8px;
+                    padding: 0 8px;
+                    height: 35px;
                     margin: 5px 8px;
 
-                    i{
-                        padding: 0 10px;
+                    .bx{
+                        color: #bfc1c5;
+                        font-size: 1.25rem;
                     }
 
                     span{
-
+                        left: 40px;
+                        position: absolute;
+                        transition: 0.6s all;
+                        white-space: nowrap;
+                        transform: translateX(0);
                     }
 
-                    &:hover{
+                    &.active{
                         color: #2e56e5;
-                        background-color: #839aec;
+                        background-color: #eaedfc;
                     }
                 }
             }

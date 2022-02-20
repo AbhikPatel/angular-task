@@ -38,3 +38,26 @@ nav{
 .container{
     height: 100%;
 }
+
+@media screen and (max-width:480px){
+
+    nav{
+        padding-left: 60px;
+        padding-right: 10px;
+        
+        h2{
+            font-size: 1.25rem;
+        }
+        
+        ul{ 
+            li{
+                a{
+                    margin: 0 5px;
+                    font-size: 0.7rem;
+                    padding: 3px 10px;
+                }
+                
+            }
+        }
+    }
+}

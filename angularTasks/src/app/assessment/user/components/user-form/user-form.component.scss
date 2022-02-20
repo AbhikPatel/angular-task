@@ -1,6 +1,7 @@
 .container{
-    background-color: #f7f8fa;
-    padding-top: 50px;
+    overflow: auto;
+    padding: 50px 0;
+    height: 100%;
 
     form{
         background-color: white;
@@ -105,4 +106,14 @@ input{
         border: 1px solid red;
         width: 5%;
     }
+}
+
+@media screen and (max-width:768px){
+    
+    .container{
+        form{
+            width: 70%;
+        }
+    }
+
 }

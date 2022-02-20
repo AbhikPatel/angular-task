@@ -84,8 +84,8 @@ export class UserFormComponent implements OnInit {
   // Service function: Post Data 
   postdata(){
     this.service.postuserdata(this.userformgroup.value).subscribe(() => {
-      this.route.navigate(['/user/userlist'])
       alert('Data is Saved')
+      this.route.navigate(['/user/userlist'])
     })
   }
 

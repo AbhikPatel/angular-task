@@ -16,9 +16,9 @@
                 <th> Last Name </th>
                 <th> Phone Number </th>
                 <th> Email </th>
-                <th> Age </th>
+                <!-- <th> Age </th>
                 <th> Gender </th>
-                <th> Date of Birth </th>
+                <th> Date of Birth </th> -->
                 <th> Department </th>
                 <th> Action </th>
             </tr>
@@ -30,9 +30,9 @@
                 <td> {{m.lastname}} </td>
                 <td> {{m.phone}} </td>
                 <td> {{m.elemail}} </td>
-                <td> {{m.umer}} </td>
+                <!-- <td> {{m.umer}} </td>
                 <td> {{m.gen}} </td>
-                <td> {{m.birth}} </td>
+                <td> {{m.birth}} </td> -->
                 <td> {{m.depart | idFilter:departfilter}} </td>
                 <td><i routerLink="../edit/{{m.id}}" class='bx bxs-edit-alt'></i><i (click)="deletedata(m.id)"
                         class='bx bxs-trash'></i></td>

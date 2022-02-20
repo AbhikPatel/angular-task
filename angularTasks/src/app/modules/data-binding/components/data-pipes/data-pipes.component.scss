@@ -1,6 +1,7 @@
 .container{
     height: 100%;
     padding: 50px 0;
+    background-color: #f7f8fa;
 
     table{
         border-collapse: collapse;
@@ -21,5 +22,21 @@
         }
 
     }
+}
+
+@media screen and (max-width:480px){
+    
+    .container{
+        table{
+            thead,tbody{
+                td,th{
+                    padding: 5px 10px;
+                    font-size: 0.8rem;
+                }
+            }
+    
+        }
+    }
+
 }
 

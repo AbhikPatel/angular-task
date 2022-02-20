@@ -1,4 +1,82 @@
 .container{
-    height: auto;
+    height: 100%;
     overflow: auto;
+    background-color: #f7f8fa;
+
+    .card{
+
+        p{
+            margin: 10px 0;
+        }
+        table{
+            border-collapse: collapse;
+            margin: 30px auto;
+            
+            thead,tbody{
+                
+                td,th{
+                    border: 1px solid #2e56e5;
+                    padding: 5px 20px;
+                    text-align: center;
+                    cursor: pointer;
+                }
+    
+                th{
+                    background-color: #2e56e5;
+                    color: white;
+                }
+            }
+        }
+
+        .product-table{
+            border: 2px solid #2e56e5;
+            padding: 30px;
+
+            .box{
+                padding: 30px;
+
+                p{
+                    margin: 5px 0;
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width:768px)
+{
+    table{
+        margin: 30px auto;
+        
+        thead,tbody{
+            
+            td,th{
+                font-size: 0.8rem;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:480px){
+    
+    .container{
+        .card{
+            overflow: hidden;
+            table{
+                overflow: auto;
+                width: 50px;
+                border: 3px solid red;
+
+                thead,tbody{
+
+                    td,th{
+                        padding: 5px;
+                    }
+                }
+            }
+        }
+    }
+
 }
