@@ -1,15 +1,14 @@
 aside{
     height: 100%;
     position: relative;
-
+    white-space: nowrap;
+    
     h1{
+        overflow: hidden;
         color: #2e56e5;
-        top: 10px;
-        left: 70px;
-        white-space: nowrap;
-        position: absolute;
+        text-align: right;
+        padding-right: 10px;
         transition: 0.6s all;
-        transform: translateX(0px);
     }
     
     nav{
@@ -26,6 +25,7 @@ aside{
                     text-decoration: none;
                     padding: 0 8px;
                     height: 35px;
+                    overflow: hidden;
                     margin: 5px 8px;
 
                     .bx{
@@ -34,11 +34,8 @@ aside{
                     }
 
                     span{
-                        left: 40px;
-                        position: absolute;
+                        padding-left: 10px;
                         transition: 0.6s all;
-                        white-space: nowrap;
-                        transform: translateX(0);
                     }
 
                     &.active{

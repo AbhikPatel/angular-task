@@ -51,7 +51,7 @@ html, body{
     flex: 0 0 54px;
 }
 
-#bar:checked ~ .side aside nav li a span{
+#bar:checked ~ .side aside nav  li a span{
     transform: translateX(100px);
 }
 #bar:checked ~ .side aside h1{
@@ -85,7 +85,7 @@ html, body{
         left: 0;
     }
 
-    #bar:checked ~ .side aside nav li a span{
+    #bar:checked ~ .side aside nav  li a span{
         transform: translateX(0);
     }
 
@@ -94,7 +94,6 @@ html, body{
     }
 
     #bar:checked ~ .outlet{
-        // background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
         filter: blur(6px);
     }
 }

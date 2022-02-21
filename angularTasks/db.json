@@ -65,17 +65,6 @@
       "birth": "2022-02-23",
       "depart": "1",
       "id": 1
-    },
-    {
-      "firstname": "Chintan",
-      "lastname": "Patel",
-      "phone": "995864225",
-      "elemail": "chintu@gamil.com",
-      "umer": "52",
-      "gen": "Male",
-      "birth": "2022-03-03",
-      "depart": "3",
-      "id": 2
     }
   ],
   "department": [
