@@ -1,19 +1,20 @@
 nav{
-    flex: 0 0 52px;
+    flex: 0 0 60px;
     background-color: white;
     padding: 0 80px;
     border-bottom: 1px solid #d8d9db;
     
     h2{
         color: #2e56e5;
+        font-size: 1.25rem;
     }
     
-    ul{
+    .menu{
         list-style: none;
         
-        li{
+        .nav-items{
 
-            a{
+            .nav-links{
                 text-decoration: none;
                 margin: 0 20px;
                 color: black;
@@ -39,25 +40,54 @@ nav{
     height: 100%;
 }
 
-@media screen and (max-width:480px){
+input{
+    display: none;
+}
+
+.drop-down{
+    position: absolute;
+    background-color: #2e56e5;
+    top: -300px;
+    right: 10px;
+    list-style: none;
+    padding: 20px 30px;
+    transition: 0.4s all;
+
+    li{
+        text-align: center;
+        margin: 5px 0;
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+
+
+@media screen and (max-width:567px){
 
     nav{
-        padding-left: 60px;
-        padding-right: 10px;
+        padding: 0 60px;
+        flex: 0 0 50px;
         
         h2{
-            font-size: 1.25rem;
+            font-size: 1rem;
         }
         
-        ul{ 
-            li{
-                a{
-                    margin: 0 5px;
-                    font-size: 0.7rem;
-                    padding: 3px 10px;
-                }
-                
-            }
+        .menu{ 
+            display: none;
         }
+    }
+
+    label{
+        font-size: 1.75rem;
+        color: #2e56e5;
+    }
+
+    #bind-menu:checked ~ .drop-down{
+        top: 50px;
     }
 }

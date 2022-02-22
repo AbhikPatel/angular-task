@@ -1,11 +1,18 @@
 <div class="container d-flex flex-column">
     <nav class="d-flex justify-content-between align-items-center">
         <h2> Data Binding </h2>
-        <ul class="d-flex">
+        <ul class="d-flex menu">
+            <li class="nav-items"><a class="nav-links" routerLink="bind" routerLinkActive="active"> Types </a></li>
+            <li class="nav-items"><a class="nav-links" routerLink="directive" routerLinkActive="active"> Directives </a></li>
+            <li class="nav-items"><a class="nav-links" routerLink="pipes" routerLinkActive="active"> Pipes </a></li>
+        </ul>
+        <input type="checkbox" id="bind-menu">
+        <ul class="drop-down">
             <li><a routerLink="bind" routerLinkActive="active"> Types </a></li>
             <li><a routerLink="directive" routerLinkActive="active"> Directives </a></li>
             <li><a routerLink="pipes" routerLinkActive="active"> Pipes </a></li>
         </ul>
+        <label for="bind-menu"> <i class='bx bx-chevrons-left'></i> </label>
     </nav>
     <div class="outlet flex-grow">
         <router-outlet></router-outlet>

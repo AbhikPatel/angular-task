@@ -6,13 +6,14 @@
         cursor: pointer;
         position: absolute;
         z-index: 999;
+        top: 7px;
         color: #2e56e5;
         font-size: 2.25rem;
-        left: 13px;
+        left: 11px;
     }
     .side{
         flex: 0 0 250px;
-        transition: 0.6s all;
+        transition: 0.4s all;
         overflow: hidden;
         border: 1px solid #d8d9db;
     }
@@ -31,8 +32,8 @@
 
         label{
             font-size: 2rem;
-            top: 10px;
-            left: 15px;
+            top: 4px;
+            left: 13px;
         }
     }
 

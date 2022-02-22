@@ -1,18 +1,30 @@
 aside{
     height: 100%;
-    position: relative;
     white-space: nowrap;
+    position: relative;
+
+    // Kevang's Code 
+    // &:after {
+    //     content: '';
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     left: 0;
+    // }
     
     h1{
-        overflow: hidden;
         color: #2e56e5;
-        text-align: right;
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        height: 58px;
         padding-right: 10px;
-        transition: 0.6s all;
+        transition: 0.4s all;
     }
     
     nav{
-        padding-top: 50px;
+        // padding-top: 50px;
 
         ul{
             border-top: 1px solid #d8d9db;
@@ -20,13 +32,13 @@ aside{
             list-style: none;
             li{
                 a{
+                    padding: 0 8px;
                     border-radius: 10px;
                     color: black;
                     text-decoration: none;
-                    padding: 0 8px;
                     height: 35px;
-                    overflow: hidden;
                     margin: 5px 8px;
+                    overflow: hidden;
 
                     .bx{
                         color: #bfc1c5;
@@ -35,7 +47,8 @@ aside{
 
                     span{
                         padding-left: 10px;
-                        transition: 0.6s all;
+                        transition: 0.4s all;
+                        font-size: 0.9rem;
                     }
 
                     &.active{
@@ -53,5 +66,12 @@ aside{
 }
 
 .menu{
-    padding: 50px 0;
+    overflow: auto;
+    padding: 30px 0;
+}
+
+@media screen and (max-width:480px){
+    // .bx{
+    //     display: none;
+    // }
 }

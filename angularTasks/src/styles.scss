@@ -49,14 +49,18 @@ html, body{
 
 #bar:checked ~ .side{
     flex: 0 0 54px;
+
+    & span{
+        transform: translateX(100px);
+    }
+
+    & h1{
+        transform: translateX(500px);
+    }
 }
 
-#bar:checked ~ .side aside nav  li a span{
-    transform: translateX(100px);
-}
-#bar:checked ~ .side aside h1{
-    transform: translateX(100px);
-}
+
+
 
 .card{
     border: 1px solid #d8d9db;
@@ -73,7 +77,6 @@ html, body{
 
     .side{
         position: absolute;
-        border: 3px solid red;
         left: -250px;
         background-color: white;
         width: 250px;
@@ -98,3 +101,13 @@ html, body{
     }
 }
 
+@media screen and (max-width:576px){
+    .side{
+        left: -100%;
+        width: 100%;
+    }
+
+    #bar:checked ~ .side{
+        left: 0;
+    }
+}
