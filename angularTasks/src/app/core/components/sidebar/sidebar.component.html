@@ -2,16 +2,16 @@
         <h1>Angular Tasks</h1>
         <nav class="d-flex flex-column justify-content-between flex-grow">
                 <ul class="menu" >
-                        <li class="d-flex"><a class="d-flex align-items-center flex-grow"  routerLink="databind" routerLinkActive="active"><i class='bx bx-network-chart'></i>
+                        <li class="d-flex"><a class="d-flex align-items-center flex-grow" (click)="menu()"  routerLink="databind" routerLinkActive="active"><i class='bx bx-network-chart'></i>
                                         <span>Data-Blinding </span> </a>
                         </li>
-                        <li class="d-flex"><a class="d-flex align-items-center flex-grow"  routerLink="employee" routerLinkActive="active"><i class='bx bx-user'></i>
+                        <li class="d-flex"><a class="d-flex align-items-center flex-grow" (click)="menu()"  routerLink="employee" routerLinkActive="active"><i class='bx bx-user'></i>
                                         <span> Users </span></a>
                         </li>
-                        <li class="d-flex"><a class="d-flex align-items-center flex-grow"  routerLink="resume" routerLinkActive="active"><i class='bx bx-briefcase-alt-2'></i>
+                        <li class="d-flex"><a class="d-flex align-items-center flex-grow" (click)="menu()" routerLink="resume" routerLinkActive="active"><i class='bx bx-briefcase-alt-2'></i>
                                         <span>
                                                 Resume-Builder</span></a></li>
-                        <li class="d-flex"><a class="d-flex align-items-center flex-grow"  routerLink="user" routerLinkActive="active"><i class='bx bx-notepad'></i><span>
+                        <li class="d-flex"><a class="d-flex align-items-center flex-grow" (click)="menu()" routerLink="user" routerLinkActive="active"><i class='bx bx-notepad'></i><span>
                                                 Assessment
                                         </span></a></li>
                 </ul>

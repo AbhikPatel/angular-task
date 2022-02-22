@@ -10,43 +10,45 @@
                 <button routerLink="/user/userform" class="create">+ Create</button>
             </div>
             <div class="search-area">
-                <input type="search" placeholder="Search By Name" class="search-box" [(ngModel)] = 'search'>
+                <input type="search" placeholder="Search By Name" class="search-box" [(ngModel)]='search'>
                 <input type="search" placeholder="Search By Department" class="search-box">
                 <input type="search" placeholder="Search By City" class="search-box">
             </div>
         </div>
 
         <!-- List Table  -->
-        <table>
-            <thead>
-                <tr>
-                    <th> Full Name </th>
-                    <th> Email </th>
-                    <th> Mobile </th>
-                    <th> City </th>
-                    <th> Department </th>
-                    <th colspan="3"></th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let user of userlistdata | searchuser:search , let i = index">
-                    <td> {{ user.fullname }} </td>
-                    <td> {{ user.mail }} </td>
-                    <td> {{ user.mobile }} </td>
-                    <td> {{ user.city }} </td>
-                    <td> {{ user.department | getbyid:departmentfilter }} </td>
-                    <td>
-                        <button routerLink="../edit/{{user.id}}" class="edit"> Edit </button>
-                        <button (click)="ondelete(user.id)" class="del"> Delete </button>
-                        <button class="details"> Details </button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="list-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th> Full Name </th>
+                        <th> Email </th>
+                        <th> Mobile </th>
+                        <th> City </th>
+                        <th> Department </th>
+                        <th colspan="3"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of userlistdata | searchuser:search , let i = index">
+                        <td> {{ user.fullname }} </td>
+                        <td> {{ user.mail }} </td>
+                        <td> {{ user.mobile }} </td>
+                        <td> {{ user.city }} </td>
+                        <td> {{ user.department | getbyid:departmentfilter }} </td>
+                        <td>
+                            <button routerLink="../edit/{{user.id}}" class="edit"> Edit </button>
+                            <button (click)="ondelete(user.id)" class="del"> Delete </button>
+                            <button class="details"> Details </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <!-- Paging Section  -->
         <div class="paging">
-            <button class="page" > Previous </button>
+            <button class="page"> Previous </button>
             <button class="page"> 1 </button>
             <button class="page"> 2 </button>
             <button class="page"> 3 </button>

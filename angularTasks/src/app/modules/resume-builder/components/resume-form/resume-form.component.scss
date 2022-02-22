@@ -83,3 +83,25 @@ button{
         width: 70%;
     }
 }
+
+@media screen and (max-width: 567px){
+    form{
+        width: 80%;
+
+        h2{
+            font-size: 1.25rem;
+        }
+
+        section{
+            h3{
+                font-size: 1rem;
+            }
+
+            .space{
+                label{
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MainService } from './services/main.service';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  
   title = 'angularTasks';
+  window:boolean;
+
+  constructor(private ser:MainService) {
+  }
+
+  ngOnInit(): void {
+    this.window = false
+  }
+
 
 }

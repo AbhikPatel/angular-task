@@ -159,9 +159,41 @@ span{
                     }
                 }
             }
+
+            .list-table{
+                td,th{
+                    font-size: 0.8rem;
+                }
+            }
         }
     }
 
+    button{
+        font-size: 0.8rem;
+        padding: 5px 8px;
+    }
     
+}
+
+@media screen and (max-width:567px){
     
+    .top-bar{
+        padding: 0;
+        .search-area{
+            border: 1px solid red;
+            padding: 0;
+            .search-box{
+                width: 80px;
+            }
+        }
+    }
+
+    .list-table{
+        overflow-x: scroll;
+    }
+
+    th,td{
+        width: 100px;
+        padding: 0;
+    }
 }

@@ -36,6 +36,7 @@
         .gender{
             padding: 20px 8%;
             width: 50%;
+            min-width: 220px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -116,4 +117,25 @@ input{
         }
     }
 
+}
+
+@media screen and (max-width:576px){
+
+    .container{
+        form{
+            width: 80%;
+
+            h2{
+                font-size: 1.25rem;
+            }
+        }
+    }
+    label{
+        font-size: 0.8rem;
+    }
+
+    .button{
+        font-size: 1rem;
+    }
+    
 }
