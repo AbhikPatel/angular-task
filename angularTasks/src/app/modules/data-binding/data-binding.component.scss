@@ -50,13 +50,9 @@ input{
 
 .drop-down{
     position: absolute;
-    border: 1px solid #2e56e5;
-    background-color: transparent;
-    border-bottom-left-radius: 40%;
-    border-bottom-right-radius: 40%;
-    backdrop-filter: blur(3px);
-    top: -300px;
-    right: 30px;
+    background-color: #2e56e5;
+    right: -300px;
+    top: 50px;
     list-style: none;
     padding: 20px 50px;
     transition: 0.4s all;
@@ -66,7 +62,7 @@ input{
         margin: 10px 0;
         a{
             text-decoration: none;
-            color: black;
+            color: white;
             font-weight: 600;
             font-size: 0.8rem;
         }
@@ -75,7 +71,7 @@ input{
 
 
 
-@media screen and (max-width:567px){
+@media screen and (max-width:576px){
 
     nav{
         padding: 0 60px;
@@ -97,6 +93,6 @@ input{
     }
 
     #bind-menu:checked ~ .drop-down{
-        top: 50px;
+        right: 0px;
     }
 }

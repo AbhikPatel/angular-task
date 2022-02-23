@@ -14,9 +14,4 @@ export class AppComponent {
   constructor(private ser:MainService) {
   }
 
-  ngOnInit(): void {
-    this.window = false
-  }
-
-
 }

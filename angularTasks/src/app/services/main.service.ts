@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class MainService {
 
-  servar:boolean;  
+  window:boolean = false;  
 
   constructor() { }
 }

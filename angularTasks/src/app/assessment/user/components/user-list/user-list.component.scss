@@ -15,7 +15,6 @@
         }
 
         .top-bar{
-            justify-content: space-between;
             padding: 20px 0;
 
             .search-area{
@@ -175,15 +174,16 @@ span{
     
 }
 
-@media screen and (max-width:567px){
+@media screen and (max-width:576px){
     
     .top-bar{
+        border: 1px solid red;
         padding: 0;
         .search-area{
-            border: 1px solid red;
             padding: 0;
             .search-box{
-                width: 80px;
+                margin: 15px 0;
+                font-size: 0.7rem;
             }
         }
     }

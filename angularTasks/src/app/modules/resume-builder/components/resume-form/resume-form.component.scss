@@ -84,9 +84,11 @@ button{
     }
 }
 
-@media screen and (max-width: 567px){
+@media screen and (max-width: 576px){
     form{
-        width: 80%;
+        width: 100%;
+        background-color: #f7f8fa;
+        border: none;
 
         h2{
             font-size: 1.25rem;

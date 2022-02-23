@@ -15,7 +15,7 @@ export class SidebarComponent implements OnInit {
 
   menu()
   {
-    this.ser.servar = false;
+    this.ser.window = false;
   }
 
 }
