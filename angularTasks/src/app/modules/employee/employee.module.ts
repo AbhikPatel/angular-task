@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CompanyService } from './services/company.service';
 import { IdFilterPipe } from './pipes/id-filter.pipe';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { IdFilterPipe } from './pipes/id-filter.pipe';
     CommonModule,
     EmployeeRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    OverlayModule
   ],
   providers:[
    CompanyService

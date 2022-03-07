@@ -153,6 +153,17 @@
       "birth": "2022-02-23",
       "depart": "1",
       "id": 1
+    },
+    {
+      "firstname": "Abhishek",
+      "lastname": "Patel",
+      "phone": "9925607945",
+      "elemail": "abhikpatel15@gmail.com",
+      "umer": "28",
+      "gen": "Male",
+      "birth": "2022-03-24",
+      "depart": "2",
+      "id": 2
     }
   ],
   "department": [

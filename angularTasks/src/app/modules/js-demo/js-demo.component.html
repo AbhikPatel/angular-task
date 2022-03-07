@@ -1,0 +1,22 @@
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th> Id </th>
+                <th> Name </th>
+                <th> Salary </th>
+                <th> Company </th>
+                <th> City </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let m of Employee">
+                <td> {{ m.emp_id }} </td>
+                <td> {{ m.emp_name }} </td>
+                <td> {{ m.salary }} </td>
+                <td> {{ m.company }} </td>
+                <td> {{ m.city }} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
