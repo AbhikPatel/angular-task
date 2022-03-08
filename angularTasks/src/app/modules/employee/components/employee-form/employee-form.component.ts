@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { EventEmitter } from '@angular/core';
 import { Department } from '../../models/ceo.model';
 import { CompanyService } from '../../services/company.service';
 
@@ -11,13 +12,20 @@ import { CompanyService } from '../../services/company.service';
 })
 export class EmployeeFormComponent implements OnInit {
 
+  @Output() cancel:EventEmitter<Event>
+
   isedit:boolean = false;
   department: Department[] ;
   getid:number;
   btn:string;
   useradd:FormGroup;
+
+  @Input() overlayid:number;
+
   constructor(private route: Router, private bob:FormBuilder, private ser:CompanyService, private activeroute:ActivatedRoute) { 
     this.useradd = this.garbage();
+    this.overlayid = 0;
+    this.cancel = new EventEmitter<Event>()
 
   }
 
@@ -26,15 +34,18 @@ export class EmployeeFormComponent implements OnInit {
 
     this.getdepart()
 
-    this.getid = this.activeroute.snapshot.params['id'];
-    if(this.getid)
+    // this.getid = this.activeroute.snapshot.params['id'];
+
+    console.log(this.overlayid);
+    
+    if(this.overlayid != 0)
     {
       this.isedit = true;
     }
 
     if(this.isedit)
     {
-      this.ser.getbyid(this.getid).subscribe((m) => {
+      this.ser.getbyid(this.overlayid).subscribe((m) => {
         this.useradd.patchValue(m)
       })
 
@@ -43,6 +54,7 @@ export class EmployeeFormComponent implements OnInit {
     else{
       this.btn = "Save";
     }
+
   }
 
   garbage()
@@ -68,6 +80,7 @@ export class EmployeeFormComponent implements OnInit {
     this.ser.postdata(this.useradd.value).subscribe(() => {
       alert('Data is Saved')
       this.route.navigate(['/employee/list']);
+      this.cancel.emit();
     })
   }
 
@@ -105,6 +118,10 @@ export class EmployeeFormComponent implements OnInit {
     this.ser.getdepart().subscribe((m) => {
       this.department = m;
     })  
+  }
+
+  oncancel(){
+    this.cancel.emit();
   }
 
 }
