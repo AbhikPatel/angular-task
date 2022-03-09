@@ -12,14 +12,14 @@ import { CompanyService } from '../../services/company.service';
 })
 export class EmployeeFormComponent implements OnInit {
 
-  @Output() cancel:EventEmitter<Event>
-
+  
   isedit:boolean = false;
   department: Department[] ;
   getid:number;
   btn:string;
   useradd:FormGroup;
-
+  
+  @Output() cancel:EventEmitter<Event>
   @Input() overlayid:number;
 
   constructor(private route: Router, private bob:FormBuilder, private ser:CompanyService, private activeroute:ActivatedRoute) { 

@@ -1,34 +1,9 @@
-<h3>Example 1</h3>
-
-<!--  This is our template. template1 is the template reference variable holds the reference to the Template
-  template1 is of type TemplateRef This won't be rendered here -->
-
-
-<ng-template #template1>
-    <p>This is our template. It will be displayed on the div *ngTemplateOutlet="myTemplateRef"</p>
+<ng-template #demo >
+  <p> This is Template with reference </p>
 </ng-template>
 
-<p>The Template appears after this</p>
+<p>------------ Para Border ---------------</p>
 
-
-<!-- 
-  We want to render the above template here.
-  Hence we use the ngTemplateOutlet directive 
-  Assign template1 to ngTemplateOutlet
--->
-
-
-<ng-container *ngTemplateOutlet="template1">
-    This text is not displayed
+<ng-container *ngTemplateOutlet="demo">
+  
 </ng-container>
-
-
-<!-- 
-  Use can use any element. 
-  Here we use div instead of ng-container
-  Div is not rendered 
--->
-
-
-<div *ngTemplateOutlet="template1">
-</div>
