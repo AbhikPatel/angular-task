@@ -1,0 +1,31 @@
+<div class="container">
+    <form [formGroup]="subjectform">
+        <h3> Subject Demo Form </h3>
+        <div class="space d-flex">
+            <div class="col">
+                <label for="fname"> First Name </label>
+                <input type="text" id="fname" name="fname" formControlName="fname">
+            </div>
+            <div class="col">
+                <label for="lname"> Last Name </label>
+                <input type="text" id="lname" name="lname" formControlName="lname">
+            </div>
+        </div>
+        <div class="space d-flex">
+            <div class="col">
+                <label for="age"> Age </label>
+                <input type="number" id="age" name="age" formControlName="age">
+            </div>
+            <div class="col">
+                <label for="gender"> Gender </label>
+                <div class="gender">
+                    <input type="radio" name="gender" id="male" value="Male" formControlName="gender">
+                    <label for="male"> Male </label>
+                    <input type="radio" name="gender" id="female" value="Female" formControlName="gender">
+                    <label for="female"> Female </label>
+                </div>
+            </div>
+        </div>
+        <button (click)="onsubmit()"> Submit </button>
+    </form>
+</div>

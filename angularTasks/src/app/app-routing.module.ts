@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: 'jsdemo', loadChildren: () => import('./modules/js-demo/js-demo.module').then(m => m.JsDemoModule) },
   { path: 'template', loadChildren: () => import('./modules/template-ref/template-ref.module').then(m => m.TemplateRefModule) },
   { path: 'mvpdemo', loadChildren: () => import('./modules/mvp-demo/mvp-demo.module').then(m => m.MvpDemoModule) },
+  { path: 'subject', loadChildren: () => import('./subject-crud/subject-crud.module').then(m => m.SubjectCrudModule) },
 ];
 
 @NgModule({
