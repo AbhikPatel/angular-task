@@ -26,6 +26,6 @@
                 </div>
             </div>
         </div>
-        <button (click)="onsubmit()"> Submit </button>
+        <button  (click)="onsubmit()" [disabled]="!subjectform.valid" > Submit </button>
     </form>
 </div>

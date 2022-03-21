@@ -9,11 +9,16 @@ import { SubjectModel } from './models/subject.model';
 })
 export class SubjectService {
 
-  api:string;
-  subject:Subject<SubjectModel>;
+  subject$:Subject<SubjectModel>;
+  edit$:Subject<SubjectModel>;
 
   constructor() { 
-    this.subject = new Subject<SubjectModel>();
+    this.subject$ = new Subject<SubjectModel>()
+    this.edit$ = new Subject<SubjectModel>()
+  }
+
+  public getdata(data:SubjectModel){
+    this.subject$.next(data);
   }
   
 }

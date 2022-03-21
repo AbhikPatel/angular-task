@@ -17,9 +17,10 @@ export class SubjectFormComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.patch();
   }
 
-  builder(){
+  public builder(){
     return this.fb.group({
       fname:['',Validators.required],
       lname:['',Validators.required],
@@ -28,7 +29,15 @@ export class SubjectFormComponent implements OnInit {
     })
   }
 
-  onsubmit(){
-    console.log(this.subjectform.value);
+  public onsubmit(){
+    this.ser.getdata(this.subjectform.value);
+    this.subjectform.reset();
   }
+
+  public patch(){
+    this.ser.edit$.subscribe(data => {
+      this.subjectform.patchValue(data);
+    })
+  }
+
 }

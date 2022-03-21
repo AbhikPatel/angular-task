@@ -8,15 +8,18 @@
                 <th> Last name </th>
                 <th> Age </th>
                 <th> Gender </th>
+                <th colspan="2"> Action </th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let data of data, let i = index">
+            <tr *ngFor="let data of listdata, let i = index">
                 <td> {{ i+1 }} </td>
                 <td> {{ data.fname }} </td>
                 <td> {{ data.lname }} </td>
                 <td> {{ data.age }} </td>
                 <td> {{ data.gender }} </td>
+                <td> <button (click)="onedit(i)"> Edit </button></td>
+                <td> <button (click)="ondelete(i)"> Delete </button></td>
             </tr>
         </tbody>
     </table>
